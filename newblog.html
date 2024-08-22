@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add a gray background color with some padding */
+        body {
+            padding: 20px;
+            /*background: #8CA196;*/
+            background-image: linear-gradient(to right, #577267, #8ca196);
+            color: #000 !important;
+            font-family: "Noto Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+        }
+
+        /* Header/Blog Title */
+        .header {
+            padding: 30px;
+            font-size: 40px;
+            text-align: left;
+            color: #e2d0bd;
+            background: transparent;
+            font-family: "Audiowide", sans-serif;
+            /*text-shadow: 3px 3px 3px #8CA196;*/
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            padding-left: 20px;
+        }
+
+        /* Fake image */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: #8CA196;
+            padding: 20px;
+            margin-top: 20px;
+            font-weight: 500;
+            color: #000000;
+            line-height: 1.6;
+            font-size: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 10px;
+            text-align: center;
+            background: transparent;
+            margin-top: 20px;
+            color: #e2d0bd;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        /*Hex Codes: #577267 #8CA196 #C1B1A0*/
+
+
+        .scrollable-div {
+            height: 200px;
+            overflow-x: scroll;
+            background: #abb8c3;
+            color: #56423C;
+            padding: 20px;
+            /*color: #FFC0B7;*/
+        }
+
+        .command {
+            /*overflow-x: scroll;*/
+            background: #374B43;
+            color: #C1DFD2;
+            padding: 20px;
+            font-weight: 500;
+            font-size: 16px;
+            width: 60%;
+            font-family: "Source Code Pro";
+            /*color: #FFC0B7;*/
+        }
+
+        textarea {
+            overflow-x: scroll;
+            color: #32373c;
+            background: #abb8c3;
+            line-height: 1.3;
+        }
+
+        h6, h5, h4, h3 {
+            color: #000000;
+            text-underline: #993366;
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <h2>praveen.online</h2>
+    <aside></aside>
+</div>
+
+<div class="row">
+    <div class="leftcolumn">
+        <div id="ngrep-command" class="card">
+            <h2>ngrep command</h2>
+            <h5>MARCH 20, 2018</h5>
+            <p><b>Network grep or 'ngrep'</b>, is a tool which performs most of GNU grep's common
+                features,
+                applying them to the network layer.
+                As per Linux man page, ngrep is a pcap-aware tool that will allow you to specify extended regular
+                expressions to match against data payloads of packets.
+                It currently recognizes TCP, UDP and ICMP across Ethernet, PPP, SLIP, FDDI and null interfaces,
+                and understands bpf filter logic in the same fashion as more common packet sniffing tools,
+                such as <b>tcpdump</b> and <b>snoop</b>.
+            </p>
+
+            <h4>Basic Usage</h4>
+            <div class="command">
+                $ ngrep 'Linux' -q
+            </div>
+            <p>
+                The above command will filter the packets which contain the word 'Linux'. The option 'q' as per man
+                page 'Be quiet; don't output any information other than packet headers and their payloads (if
+                relevant)'.
+                It is good to have -q every time.
+            </p>
+            <p>
+                We can add more searching options which we will be using with grep command. Few examples are below.
+            </p>
+            <div class="command">
+                $ ngrep -i 'Linux' -q // case-insensitive
+                <br>
+                $ ngrep -iv 'Linux' -q // case-insensitive and inverse match
+                <br>
+                $ ngrep -wi 'Linux' -q // case-insensitive exact word 'linux'
+                <br>
+            </div>
+            <h5>$ ngrep -W byline -q</h5>
+            <p>
+                The <b>'byline'</b> option is a nice one like 'q' which will print the detail in a good format which is
+                easy to
+                read. Other option available are <b>'normal|single|none'</b>. As per my opinion, the most useful option
+                is byline.
+            </p>
+            <p>Options</p>
+            <div class="command">
+                $ ngrep -W normal -q
+                <br>
+                $ ngrep -W single -q
+                <br>
+                $ ngrep -W none -q
+                <br>
+            </div>
+            <h5>Commonly Used 'bpf' filter options</h5>
+            <div class="command" style="width: 70%">
+                $ ngrep -q 'req' 'host 192.168' // matches all headers containing the string 'req' sent to or from the
+                ip address starting with 192.168
+                <br>
+                <br>
+                $ ngrep -q 'req' 'dst host 192.168' // will do same as above, but instead match a destination host
+                <br>
+                <br>
+                $ ngrep -q 'req' 'src host 192.168' // will do same as above, but instead match a source host
+            </div>
+            <h5>Protocol matching</h5>
+            <div class="command">
+                $ ngrep -q 'req' 'tcp'
+                <br>
+                $ ngrep -q 'req' 'udp'
+                <br>
+                $ ngrep -q 'req' 'icmp'
+                <br>
+            </div>
+        </div>
+
+        <section id="k8s">
+            <div class="card">
+                <h2>Kubernetes with Minikube</h2>
+                <h5>March 10, 2018</h5>
+                <p>Some text..</p>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+                    eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation
+                    ullamco.</p>
+            </div>
+        </section>
+
+        <div class="card">
+            <h2>Docker Swarm</h2>
+            <h5>March 10, 2018</h5>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
+        </div>
+
+        <div class="card">
+            <h2>Docker Compose</h2>
+            <h5>March 10, 2018</h5>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
+        </div>
+
+        <div class="card">
+            <h2>Docker</h2>
+            <h5>March 10, 2018</h5>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
+        </div>
+
+        <div class="card">
+            <h2>ngrep command</h2>
+            <h5>MARCH 20, 2018</h5>
+            <p style="font-size: 18px;">Network grep or 'ngrep', is a tool which performs most of GNU grep's common
+                features,
+                applying them to the network layer.
+                As per Linux man page, ngrep is a pcap-aware tool that will allow you to specify extended regular
+                expressions to match against data payloads of packets.
+                It currently recognizes TCP, UDP and ICMP across Ethernet, PPP, SLIP, FDDI and null interfaces,
+                and understands bpf filter logic in the same fashion as more common packet sniffing tools,
+                such as tcpdump(8) and snoop(1).
+            </p>
+
+            <br>
+            <p>
+                $ ngrep -W byline -q
+
+                The ‘byline’ option is a nice one like ‘q’ which will print the detail in a good format which is easy to
+                read. Other option available are ‘normal|single|none’ . As per my opinion, the most useful option is
+                byline.
+
+                Options
+
+                $ ngrep -W normal -q
+                $ ngrep -W single -q
+                $ ngrep -W none -q
+            </p>
+
+        </div>
+        <div class="card">
+            <h2>Linux Networking Commands</h2>
+            <h5>March 10, 2018</h5>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
+        </div>
+        <div class="card">
+            <h2>Grep Command</h2>
+            <h5>March 10, 2018</h5>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
+        </div>
+
+        <div class="card">
+            <h2>Basic Linux Commands</h2>
+            <h5>March 10, 2018</h5>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
+        </div>
+
+        <div class="card">
+            <h2>Compiling Linux Kernel from Source code</h2>
+            <h5>March 10, 2018</h5>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
+        </div>
+    </div>
+    <div class="rightcolumn">
+        <div class="card">
+            <h2>About Me</h2>
+            <div class="fakeimg" style="height:100px;">Image</div>
+            <h5>"Navigating the Digital Landscape: A Decade of Java Enterprise Development"</h5>
+            <p>
+                Welcome to my blog! As a seasoned software professional with over a decade of experience in Java
+                enterprise application development, I'm passionate about sharing insights and knowledge gained from my
+                journey in the dynamic world of technology.</p>
+            <p>
+                Throughout my career, I've had the opportunity to work on a variety of projects, leveraging technologies
+                such as Java, JEE, Docker, Docker Swarm, Kubernetes, and related cloud platforms. My expertise lies in
+                designing, developing, and deploying scalable and robust enterprise applications.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Popular Post</h3>
+            <div class="fakeimg">
+                <a href="#k8s" style="color: #ddd;">Kubernetes</a>
+            </div>
+            <br>
+            <div class="fakeimg">Image</div>
+            <br>
+            <div class="fakeimg">Image</div>
+        </div>
+        <div class="card">
+            <h5>Follow Me</h5>
+            <p>Some text..</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <h5>praveen vp, praveen_v.p@outlook.com</h5>
+</div>
+
+</body>
+</html>
