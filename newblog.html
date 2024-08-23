@@ -27,7 +27,7 @@
 
         /* Header/Blog Title */
         .header {
-            padding: 30px;
+            padding: 20px;
             font-size: 40px;
             text-align: left;
             color: #e2d0bd;
@@ -346,7 +346,7 @@
         </div>
         <div id="linux-networking-commands" class="card">
             <h2>Linux Networking Commands</h2>
-            <h5>March 10, 2018</h5>
+            <h6>March 10, 2018</h6>
             <div class="entry-content">
                 <h3 style="text-align:justify;"><span><strong>ping </strong></span></h3>
                 <p style="text-align:justify;"><span>The ping command sends echo requests to the host you specify on the command line, and lists the responses received their round trip time. ping will send echo request indefinitely until you stop by <em><strong>ctrl+c</strong></em> (SIGINT). You can also add -c option to send a fixed number of requests.</span>
@@ -777,7 +777,7 @@
 
         <div class="card" id="grep-command">
             <h2>Grep Command</h2>
-            <h5>March 10, 2018</h5>
+            <h6>March 10, 2018</h6>
             <p>Grep is a powerful tool which allow you to search a word through command line.In this post we
                 can see some grep command usage examples. Grep command is basically for searching a string
                 in a given file.</p>
@@ -835,7 +835,7 @@
 
         <div id="basic-commands" class="card">
             <h2>Basic Linux Commands</h2>
-            <h5>March 10, 2018</h5>
+            <h6>March 10, 2018</h6>
             <p style="padding-left:30px;"><strong>ls </strong></p>
             <p style="text-align:justify;">List the files in the directory. You can add &#8216;-a&#8217;
                 option to show all files including hidden files. Adding the directory path will list files
@@ -987,15 +987,56 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" id="compile-linux">
             <h2>Compiling Linux Kernel from Source code</h2>
-            <h5>March 10, 2018</h5>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-                eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation
-                ullamco.</p>
+            <h6>November 12, 2014</h6>
+
+            <p><strong>C</strong>ompiling Linux kernel source code, it will be a nice thing to compile a
+                Linux kernel source code to build your own custom kernel.</p>
+            <p>It can be done in very few steps as described below.</p>
+            <hr/>
+            <p><strong>Step 1:</strong></p>
+            <p>Download the latest stable kernel from here:<a href="//www.kernel.org/"> <em><strong>https://www.kernel.org/</strong></em></a>
+            </p>
+            <p>Make sure you have downloaded the complete kernel not any patch. Or in terminal you can
+                download it by typing</p>
+            <p><em><strong>wget <a href="https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.16.7.tar.xz"
+                                   rel="nofollow">https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.16.7.tar.xz</a></strong></em>
+            </p>
+            <p><strong>Step 2:</strong></p>
+            <p><em><strong> Extract</strong></em> the compressed file.</p>
+            <p><em><strong>tar xf linux-3.16.7.tar.xz</strong></em></p>
+            <p>Go to directory linux-3-16.7.</p>
+            <p><em><strong> cd linux-3.16.7</strong></em></p>
+            <p><strong>Step 3: Install ncurses library </strong></p>
+            <div class="command">$ sudo apt-get install libncurses5-dev</div>
+            <p>This helps to configure your kernel in command line menu based interface.</p>
+            <p><strong>Step 4: Build the kernel configuration file</strong></p>
+            <p>There are three ways to build a Linux kernel.</p>
+            <p>1. make oldconfig</p>
+            <p>2. make menuconfig</p>
+            <p>3. make qconfig/gconfig/xconfig</p>
+            <p style="text-align:left;"> We use make menuconfig</p>
+            <p>now run <em><strong>make menuconfig</strong></em> command.</p>
+            <p>In the open window you can configure the options for file system, network, input output
+                devices, and so on ...</p>
+            <p>You may not know what to select, google it, and find out what they are, in every possible
+                way. And save the configuration file and rename it as &#8220;.config&#8221;. Or You can copy
+                the current kernel configuration to present working directory, and load it in the menu and
+                edit if you need, save it and rename as &#8220;.config&#8221;.</p>
+            <p><strong>Step 5: Compile the kernel</strong></p>
+            <p>Run <em><strong>make</strong> </em>command and wait</p>
+            <p style="text-align:left;">
+                For compiling<em><strong> kernel modules</strong></em> run <em><strong>make modules</strong></em>
+                command.</p>
+            <p>It will take much time depending upon your system. After that you can test your kernel using
+                qemu.</p>
+            <p>In terminal : <strong>qemu-system-x86_64 -kernel </strong><em><strong>directory</strong></em><strong>/linux-3.16.3/arch/x86_64/boot/bzImage</strong>
+            </p>
+            <p>If every thing is in order you can see the kernel booting in qemu and our kernel doesn't
+                have an initial file system, you can see kernel panic message.</p>
+            <p>it is advisable to change to your <em><strong>directory</strong><strong>.</strong></em> That&#8217;s
+                all and be patient while compiling kernel, it will take a while!!</p>
         </div>
     </div>
     <div class="rightcolumn">
@@ -1017,9 +1058,13 @@
             </p>
         </div>
         <div class="card">
-            <h3>Popular Post</h3>
-            <div class="command">
+            <h3>Popular Posts</h3>
+            <div class="command" style="width: 99%">
                 <a href="#k8s">Kubernetes</a>
+                <br>
+                <a href="#docker-swarm">Docker Swarm</a>
+                <br>
+                <a href="#docker">Docker</a>
                 <br>
                 <a href="#ngrep-command">ngrep</a>
                 <br>
@@ -1028,6 +1073,8 @@
                 <a href="#grep-command">Grep</a>
                 <br>
                 <a href="#basic-commands">Basic Commands</a>
+                <br>
+                <a href="#compile-linux">Compile Linux Source code</a>
                 <br>
             </div>
         </div>
