@@ -273,75 +273,79 @@
                 $ ngrep -q 'req' 'icmp'
                 <br>
             </div>
-
             <h5>Examples</h5>
             <div class="command">
         <pre>
-        <strong>[root@localhost ~]# ngrep 'testProject' 'tcp' -W byline -q </strong>
-        <span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
-        <span>filter: (ip or ip6) and ( tcp )</span>
-        <span>match: testProject</span>
-        <span>T 112.110.93.73:25749 -&gt; 10.10.20.62:80 [AP]</span>
-        <span>POST /testProject/test/1.0.0 HTTP/1.1.</span>
-        <span>Cookie: JSESSIONID=CB3ECA25FFD315BFD3774EB4D6B461FA.e; Path=/testProject/; HttpOnly.</span>
-        <span>LOGINTYPE: loginType=POST.</span>
-        <span>Content-Length: 256.</span>
-        <span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
-        <span>Host: test.praveen-vp.com.</span>
-        <span>Connection: Keep-Alive.</span>
-        <span>.</span>
-        {"request":{"value": "test","response_format":"json"}}
+<strong>[root@localhost ~]# ngrep 'testProject' 'tcp' -W byline -q </strong>
+<span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
+<span>filter: (ip or ip6) and ( tcp )</span>
+<span>match: testProject</span>
+<span>T 112.110.93.73:25749 -&gt; 10.10.20.62:80 [AP]</span>
+<span>POST /testProject/test/1.0.0 HTTP/1.1.</span>
+<span>Cookie: JSESSIONID=CB3ECA25FFD315BFD3774EB4D6B461FA.e; Path=/testProject/; HttpOnly.</span>
+<span>LOGINTYPE: loginType=POST.</span>
+<span>Content-Length: 256.</span>
+<span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
+<span>Host: test.praveen-vp.com.</span>
+<span>Connection: Keep-Alive.</span>
+<span>.</span>
+{"request":{"value": "test","response_format":"json"}}
         </pre>
             </div>
             <h5></h5>
             <div class="command">
-        <pre><span><strong>[root@localhost ~]# ngrep 'testProject' -W byline -q -t </strong></span>
-        <span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
-        <span>match: testProject</span>
+<pre><span><strong>[root@localhost ~]# ngrep 'testProject' -W byline -q -t </strong></span>
+<span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
+<span>match: testProject</span>
 
-        <span>T 2018/03/20 11:25:59.214139 42.106.242.219:34954 -&gt; 10.10.20.62:80 [AP]</span>
-        <span>POST /testProject/test/1.0.0 HTTP/1.1.</span>
-        <span>Cookie: JSESSIONID=1E0A606786521013AFEFCA51817A2116.b; Path=/testProject/; HttpOnly.</span>
-        <span>Content-Length: 256.</span>
-        <span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
-        <span>Host: test.praveen-vp.com.</span>
-        <span>Connection: Keep-Alive.</span>
-        <span>.</span>
-        <span>{"request":{"value": "test","response_format":"json"}}</span></pre>
+<span>T 2018/03/20 11:25:59.214139 42.106.242.219:34954 -&gt; 10.10.20.62:80 [AP]</span>
+<span>POST /testProject/test/1.0.0 HTTP/1.1.</span>
+<span>Cookie: JSESSIONID=1E0A606786521013AFEFCA51817A2116.b; Path=/testProject/; HttpOnly.</span>
+<span>Content-Length: 256.</span>
+<span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
+<span>Host: test.praveen-vp.com.</span>
+<span>Connection: Keep-Alive.</span>
+<span>.</span>
+<span>{"request":{"value": "test","response_format":"json"}}</span></pre>
+
             </div>
             <h5>ngrep with port</h5>
             <div class="command">
-                        <pre><span><strong>[root@localhost ~]# ngrep 'testProject' 'tcp' port 9030 -W byline -q -t </strong></span>
-        <span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
-        <span>filter: (ip or ip6) and ( tcp port 9030 )</span>
-        <span>match: testProject</span>
+<pre>
+<span><strong>[root@localhost ~]# ngrep 'testProject' 'tcp' port 9030 -W byline -q -t </strong></span>
+<span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
+<span>filter: (ip or ip6) and ( tcp port 9030 )</span>
+<span>match: testProject</span>
 
-        <span>T 2018/03/20 11:47:01.927515 10.10.20.62:36746 -&gt; 10.10.56.233:9030 [AP]</span>
-        <span>POST /testProject/login/1.0.0 HTTP/1.0.</span>
-        <span>X-Real-IP: 192.168.10.195.</span>
-        <span>X-Forwarded-For:192.168.10.195.</span>
-        <span>Host:test.praveen-vp.com.</span>
-        <span>Connection: close.</span>
-        <span>Content-Length: 198.</span>
-        <span>Cookie: JSESSIONID=B9D6B5DC553C128FCFE690B538A723C4.a; Path=/testProject/; Secure; HttpOnly.</span>
-        <span>LOGINTYPE: loginType=PRE.</span>
-        <span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
-        <span>.</span>
-        <span>{"request":{"value": "test","response_format":"json"}}</span></pre>
+<span>T 2018/03/20 11:47:01.927515 10.10.20.62:36746 -&gt; 10.10.56.233:9030 [AP]</span>
+<span>POST /testProject/login/1.0.0 HTTP/1.0.</span>
+<span>X-Real-IP: 192.168.10.195.</span>
+<span>X-Forwarded-For:192.168.10.195.</span>
+<span>Host:test.praveen-vp.com.</span>
+<span>Connection: close.</span>
+<span>Content-Length: 198.</span>
+<span>Cookie: JSESSIONID=B9D6B5DC553C128FCFE690B538A723C4.a; Path=/testProject/; Secure; HttpOnly.</span>
+<span>LOGINTYPE: loginType=PRE.</span>
+<span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
+<span>.</span>
+<span>{"request":{"value": "test","response_format":"json"}}</span>
+</pre>
             </div>
             <h5>ngrep the database port</h5>
             <div class="command">
-                        <pre><span>[root@localhost]# </span>
-        <span><strong>[root@localhost]# ngrep 'REGISTRATION' port 1521 -q -W byline -T</strong></span>
-        <span>interface: eth1 (10.10.56.128/255.255.255.128)</span>
-        <span>filter: (ip or ip6) and ( port 1521 )</span>
-        <span>match: REGISTRATION</span>
+<pre>
+<span>[root@localhost]# </span>
+<span><strong>[root@localhost]# ngrep 'REGISTRATION' port 1521 -q -W byline -T</strong></span>
+<span>interface: eth1 (10.10.56.128/255.255.255.128)</span>
+<span>filter: (ip or ip6) and ( port 1521 )</span>
+<span>match: REGISTRATION</span>
 
-        <span>T +58.501281 10.10.56.233:39990 -&gt; 10.10.56.231:1521 [AP]</span>
-        <span>...........i.......^...)................</span>
-        <span>.......................select CREATED_AT, LAST_LOGGED_AT FROM</span>
-        <span> REGISTRATION_TABLE WHERE APP_ID = :1 AND STATUS = 'ACT' ORDER BY CREATED_AT DESC </span>
-        <span>.................... .............. .......... 3ceb10b1d80acc72c0f62681e0045859</span></pre>
+<span>T +58.501281 10.10.56.233:39990 -&gt; 10.10.56.231:1521 [AP]</span>
+<span>...........i.......^...)................</span>
+<span>.......................select CREATED_AT, LAST_LOGGED_AT FROM</span>
+<span> REGISTRATION_TABLE WHERE APP_ID = :1 AND STATUS = 'ACT' ORDER BY CREATED_AT DESC </span>
+<span>.................... .............. .......... 3ceb10b1d80acc72c0f62681e0045859</span>
+</pre>
             </div>
         </div>
         <div id="linux-networking-commands" class="card">
@@ -1078,10 +1082,10 @@
                 <br>
             </div>
         </div>
-<!--        <div class="card">-->
-<!--            <h5>Follow Me</h5>-->
-<!--            <p>Some text..</p>-->
-<!--        </div>-->
+        <!--        <div class="card">-->
+        <!--            <h5>Follow Me</h5>-->
+        <!--            <p>Some text..</p>-->
+        <!--        </div>-->
     </div>
 </div>
 
