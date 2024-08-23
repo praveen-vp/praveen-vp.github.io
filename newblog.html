@@ -157,6 +157,52 @@
 
 <div class="row">
     <div class="leftcolumn">
+        <section id="k8s">
+            <div class="card">
+                <h2>Kubernetes with Minikube</h2>
+                <h5>March 10, 2018</h5>
+                <p>Some text..</p>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+                    eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation
+                    ullamco.</p>
+            </div>
+        </section>
+
+        <div class="card">
+            <h2>Docker Swarm</h2>
+            <h5>March 10, 2018</h5>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+                eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation
+                ullamco.</p>
+        </div>
+
+        <div class="card">
+            <h2>Docker Compose</h2>
+            <h5>March 10, 2018</h5>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+                eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation
+                ullamco.</p>
+        </div>
+
+        <div class="card">
+            <h2>Docker</h2>
+            <h5>March 10, 2018</h5>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+                eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation
+                ullamco.</p>
+        </div>
+
         <div id="ngrep-command" class="card">
             <h2>ngrep command</h2>
             <h6>MARCH 20, 2018</h6>
@@ -230,120 +276,74 @@
 
             <h5>Examples</h5>
             <div class="command">
-<pre>
-<strong>[root@localhost ~]# ngrep 'testProject' 'tcp' -W byline -q </strong>
-<span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
-<span>filter: (ip or ip6) and ( tcp )</span>
-<span>match: testProject</span>
-<span>T 112.110.93.73:25749 -&gt; 10.10.20.62:80 [AP]</span>
-<span>POST /testProject/test/1.0.0 HTTP/1.1.</span>
-<span>Cookie: JSESSIONID=CB3ECA25FFD315BFD3774EB4D6B461FA.e; Path=/testProject/; HttpOnly.</span>
-<span>LOGINTYPE: loginType=POST.</span>
-<span>Content-Length: 256.</span>
-<span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
-<span>Host: test.praveen-vp.com.</span>
-<span>Connection: Keep-Alive.</span>
-<span>.</span>
-{"request":{"value": "test","response_format":"json"}}
-</pre>
+        <pre>
+        <strong>[root@localhost ~]# ngrep 'testProject' 'tcp' -W byline -q </strong>
+        <span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
+        <span>filter: (ip or ip6) and ( tcp )</span>
+        <span>match: testProject</span>
+        <span>T 112.110.93.73:25749 -&gt; 10.10.20.62:80 [AP]</span>
+        <span>POST /testProject/test/1.0.0 HTTP/1.1.</span>
+        <span>Cookie: JSESSIONID=CB3ECA25FFD315BFD3774EB4D6B461FA.e; Path=/testProject/; HttpOnly.</span>
+        <span>LOGINTYPE: loginType=POST.</span>
+        <span>Content-Length: 256.</span>
+        <span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
+        <span>Host: test.praveen-vp.com.</span>
+        <span>Connection: Keep-Alive.</span>
+        <span>.</span>
+        {"request":{"value": "test","response_format":"json"}}
+        </pre>
             </div>
             <h5></h5>
             <div class="command">
-<pre><span><strong>[root@localhost ~]# ngrep 'testProject' -W byline -q -t </strong></span>
-<span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
-<span>match: testProject</span>
+        <pre><span><strong>[root@localhost ~]# ngrep 'testProject' -W byline -q -t </strong></span>
+        <span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
+        <span>match: testProject</span>
 
-<span>T 2018/03/20 11:25:59.214139 42.106.242.219:34954 -&gt; 10.10.20.62:80 [AP]</span>
-<span>POST /testProject/test/1.0.0 HTTP/1.1.</span>
-<span>Cookie: JSESSIONID=1E0A606786521013AFEFCA51817A2116.b; Path=/testProject/; HttpOnly.</span>
-<span>Content-Length: 256.</span>
-<span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
-<span>Host: test.praveen-vp.com.</span>
-<span>Connection: Keep-Alive.</span>
-<span>.</span>
-<span>{"request":{"value": "test","response_format":"json"}}</span></pre>
+        <span>T 2018/03/20 11:25:59.214139 42.106.242.219:34954 -&gt; 10.10.20.62:80 [AP]</span>
+        <span>POST /testProject/test/1.0.0 HTTP/1.1.</span>
+        <span>Cookie: JSESSIONID=1E0A606786521013AFEFCA51817A2116.b; Path=/testProject/; HttpOnly.</span>
+        <span>Content-Length: 256.</span>
+        <span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
+        <span>Host: test.praveen-vp.com.</span>
+        <span>Connection: Keep-Alive.</span>
+        <span>.</span>
+        <span>{"request":{"value": "test","response_format":"json"}}</span></pre>
             </div>
             <h5>ngrep with port</h5>
             <div class="command">
-                <pre><span><strong>[root@localhost ~]# ngrep 'testProject' 'tcp' port 9030 -W byline -q -t </strong></span>
-<span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
-<span>filter: (ip or ip6) and ( tcp port 9030 )</span>
-<span>match: testProject</span>
+                        <pre><span><strong>[root@localhost ~]# ngrep 'testProject' 'tcp' port 9030 -W byline -q -t </strong></span>
+        <span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
+        <span>filter: (ip or ip6) and ( tcp port 9030 )</span>
+        <span>match: testProject</span>
 
-<span>T 2018/03/20 11:47:01.927515 10.10.20.62:36746 -&gt; 10.10.56.233:9030 [AP]</span>
-<span>POST /testProject/login/1.0.0 HTTP/1.0.</span>
-<span>X-Real-IP: 192.168.10.195.</span>
-<span>X-Forwarded-For:192.168.10.195.</span>
-<span>Host:test.praveen-vp.com.</span>
-<span>Connection: close.</span>
-<span>Content-Length: 198.</span>
-<span>Cookie: JSESSIONID=B9D6B5DC553C128FCFE690B538A723C4.a; Path=/testProject/; Secure; HttpOnly.</span>
-<span>LOGINTYPE: loginType=PRE.</span>
-<span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
-<span>.</span>
-<span>{"request":{"value": "test","response_format":"json"}}</span></pre>
+        <span>T 2018/03/20 11:47:01.927515 10.10.20.62:36746 -&gt; 10.10.56.233:9030 [AP]</span>
+        <span>POST /testProject/login/1.0.0 HTTP/1.0.</span>
+        <span>X-Real-IP: 192.168.10.195.</span>
+        <span>X-Forwarded-For:192.168.10.195.</span>
+        <span>Host:test.praveen-vp.com.</span>
+        <span>Connection: close.</span>
+        <span>Content-Length: 198.</span>
+        <span>Cookie: JSESSIONID=B9D6B5DC553C128FCFE690B538A723C4.a; Path=/testProject/; Secure; HttpOnly.</span>
+        <span>LOGINTYPE: loginType=PRE.</span>
+        <span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
+        <span>.</span>
+        <span>{"request":{"value": "test","response_format":"json"}}</span></pre>
             </div>
             <h5>ngrep the database port</h5>
             <div class="command">
-                <pre><span>[root@localhost]# </span>
-<span><strong>[root@localhost]# ngrep 'REGISTRATION' port 1521 -q -W byline -T</strong></span>
-<span>interface: eth1 (10.10.56.128/255.255.255.128)</span>
-<span>filter: (ip or ip6) and ( port 1521 )</span>
-<span>match: REGISTRATION</span>
+                        <pre><span>[root@localhost]# </span>
+        <span><strong>[root@localhost]# ngrep 'REGISTRATION' port 1521 -q -W byline -T</strong></span>
+        <span>interface: eth1 (10.10.56.128/255.255.255.128)</span>
+        <span>filter: (ip or ip6) and ( port 1521 )</span>
+        <span>match: REGISTRATION</span>
 
-<span>T +58.501281 10.10.56.233:39990 -&gt; 10.10.56.231:1521 [AP]</span>
-<span>...........i.......^...)................</span>
-<span>.......................select CREATED_AT, LAST_LOGGED_AT FROM</span>
-<span> REGISTRATION_TABLE WHERE APP_ID = :1 AND STATUS = 'ACT' ORDER BY CREATED_AT DESC </span>
-<span>.................... .............. .......... 3ceb10b1d80acc72c0f62681e0045859</span></pre>
+        <span>T +58.501281 10.10.56.233:39990 -&gt; 10.10.56.231:1521 [AP]</span>
+        <span>...........i.......^...)................</span>
+        <span>.......................select CREATED_AT, LAST_LOGGED_AT FROM</span>
+        <span> REGISTRATION_TABLE WHERE APP_ID = :1 AND STATUS = 'ACT' ORDER BY CREATED_AT DESC </span>
+        <span>.................... .............. .......... 3ceb10b1d80acc72c0f62681e0045859</span></pre>
             </div>
         </div>
-        <section id="k8s">
-            <div class="card">
-                <h2>Kubernetes with Minikube</h2>
-                <h5>March 10, 2018</h5>
-                <p>Some text..</p>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-                    eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation
-                    ullamco.</p>
-            </div>
-        </section>
-
-        <div class="card">
-            <h2>Docker Swarm</h2>
-            <h5>March 10, 2018</h5>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-                eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation
-                ullamco.</p>
-        </div>
-
-        <div class="card">
-            <h2>Docker Compose</h2>
-            <h5>March 10, 2018</h5>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-                eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation
-                ullamco.</p>
-        </div>
-
-        <div class="card">
-            <h2>Docker</h2>
-            <h5>March 10, 2018</h5>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-                eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation
-                ullamco.</p>
-        </div>
-
         <div id="linux-networking-commands" class="card">
             <h2>Linux Networking Commands</h2>
             <h5>March 10, 2018</h5>
@@ -774,26 +774,217 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+
+        <div class="card" id="grep-command">
             <h2>Grep Command</h2>
             <h5>March 10, 2018</h5>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-                eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation
-                ullamco.</p>
+            <p>Grep is a powerful tool which allow you to search a word through command line.In this post we
+                can see some grep command usage examples. Grep command is basically for searching a string
+                in a given file.</p>
+            <p>By default, <b>grep</b> prints the matching lines.</p>
+            <em><strong>Syntax</strong></em>
+            <div class="command">
+                $ grep [options] pattern [file ...]
+            </div>
+            </pre>
+            <p>Add &#8216;<em><strong>&#8211;color=auto</strong></em>&#8216; option to get colored output.
+            </p>
+            <p>Grep command options.</p>
+            <p><strong>Case-insensitive searching </strong></p>
+            <div class="command">$ grep -i 'string_to_search' file_name</div>
+            <p><strong>Searching with wild character</strong></p>
+            <div class="command">$ grep <em><strong>-i</strong> </em>'search key.*' file_name</div>
+            <p>the above command will list every line starting with search key what ever after this is not a
+                problem.</p>
+            <p>More combinations like</p>
+            <div class="command">$ grep 'search.*key' file_name
+                <br>
+                $ grep '.*search key' file_name
+            </div>
+            <p>are possible.</p>
+            <p><strong>Searching for exact string not as a sub strings</strong></p>
+            <div class="command">$ grep -<em><strong>w</strong> </em>'search key' file_name</div>
+            <p><strong>Searching recursively in a directory.</strong></p>
+            <div class="command">$ grep <em><strong>-r</strong></em> 'search key' <em>directory</em></div>
+            <p><strong>Invert mach finding</strong></p>
+            <div class="command">$ grep -v 'search key' file_name</div>
+            <p><strong>Multiple match finding</strong></p>
+            <div class="command">$ grep -<em><strong>e</strong></em> 'search key1' -<em><strong>e</strong></em> 'search
+                key2' file_name
+            </div>
+            <p><strong>Show only list of files that contains search key</strong></p>
+            <div class="command">$ grep -<em><strong>l</strong> </em>'search key' file_name</div>
+            <p><strong>Finding number of matches in file for &#8216;search key&#8217;</strong></p>
+            <div class="command">$ grep -<em><strong>c</strong></em> 'search key' file_name</div>
+            <p>add &#8216;w&#8217; option to find exact match.</p>
+            <div class="command">$ grep -wc &#8216;search key&#8217; file_name</div>
+            <p><strong>Get the line number with grep out put</strong></p>
+            <div class="command">$ grep <em><strong>-n</strong></em> 'search key' file_name</div>
+            <p><strong>Show lines after the match </strong></p>
+            <div class="command">$ grep <em><strong>-A</strong></em> &lt;N&gt; 'search key' file_name</div>
+            <p>the above command will show &#8216;<strong>N&#8217; </strong> lines after the match.</p>
+            <p><strong>Show lines before the match </strong></p>
+            <div class="command">$ grep -<em><strong>B</strong></em> &lt;<strong>N</strong>&gt; 'search key' file_name
+            </div>
+            <p>the above command will show &#8216;<strong>N&#8217; </strong> lines before the match.</p>
+            <p><strong>Show lines around the match </strong></p>
+            <div class="command">$ grep <em><strong>-C</strong></em> &lt;<strong>N</strong>&gt; 'search key' file_name
+            </div>
+            <p>the above command will show &#8216;<strong>N&#8217; </strong> lines around the match.</p>
         </div>
 
-        <div class="card">
+        <div id="basic-commands" class="card">
             <h2>Basic Linux Commands</h2>
             <h5>March 10, 2018</h5>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-                eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation
-                ullamco.</p>
+            <p style="padding-left:30px;"><strong>ls </strong></p>
+            <p style="text-align:justify;">List the files in the directory. You can add &#8216;-a&#8217;
+                option to show all files including hidden files. Adding the directory path will list files
+                in the mentioned directory.</p>
+            <p>Some commonly used options for ls.</p>
+            <div class="command">
+                $ ls -l
+                <br>
+                $ ls -la
+                <br>
+                $ ls -lrt (reverse sort with the time of change in the files)
+                <br>
+                $ ls -lrth ('h' options to list files in print sizes in human-readable format)
+            </div>
+            <p><img alt="Screenshot from 2018-02-28 20:29:02"
+                    class="alignnone size-full wp-image-73"
+                    data-attachment-id="73"
+                    data-comments-opened="1" data-image-caption=""
+                    data-image-description=""
+                    data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                    data-image-title="Screenshot from 2018-02-28 20:29:02"
+                    data-large-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png?w=700"
+                    data-medium-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png?w=300"
+                    data-orig-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png"
+                    data-orig-size="870,440"
+                    data-permalink="https://vppraveen.wordpress.com/2018/02/28/basic-linux-commands/screenshot-from-2018-02-28-202902/"
+                    loading="lazy"
+                    sizes="(max-width: 870px) 100vw, 870px"
+                    src="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png?w=700"
+                    srcset="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png 870w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png?w=150&amp;h=76 150w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png?w=300&amp;h=152 300w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png?w=768&amp;h=388 768w"/>
+            </p>
+            <p><strong>cd</strong></p>
+            <p>Change directory, move to another directory. cd command without any directory name will
+                redirect to the home directory.</p>
+            <p><strong>pwd</strong></p>
+            <p>Print working directory.</p>
+            <p><img alt="Screenshot from 2018-02-28 20:42:46"
+                    class="alignnone size-full wp-image-75"
+                    data-attachment-id="75"
+                    data-comments-opened="1" data-image-caption=""
+                    data-image-description=""
+                    data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                    data-image-title="Screenshot from 2018-02-28 20:42:46"
+                    data-large-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png?w=521"
+                    data-medium-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png?w=300"
+                    data-orig-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png"
+                    data-orig-size="521,251"
+                    data-permalink="https://vppraveen.wordpress.com/2018/02/28/basic-linux-commands/screenshot-from-2018-02-28-204246/"
+                    loading="lazy"
+                    sizes="(max-width: 521px) 100vw, 521px"
+                    src="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png?w=700"
+                    srcset="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png 521w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png?w=150&amp;h=72 150w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png?w=300&amp;h=145 300w"/>
+            </p>
+            <p><strong>rm</strong></p>
+            <p>delete files and directories, directories need to add &#8216;-r&#8217; option, like rm -r
+                folder_name</p>
+            <p><strong>mkdir</strong></p>
+            <p>the command to create a directory.</p>
+            <p><strong>touch</strong></p>
+            <p>The <strong>touch</strong> command is used to create a file.</p>
+            <p><img alt="Screenshot from 2018-02-28 22:52:21"
+                    class="alignnone  wp-image-76"
+                    data-attachment-id="76"
+                    data-comments-opened="1" data-image-caption=""
+                    data-image-description=""
+                    data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                    data-image-title="Screenshot from 2018-02-28 22:52:21"
+                    data-large-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png?w=525"
+                    data-medium-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png?w=300"
+                    data-orig-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png"
+                    data-orig-size="525,381"
+                    data-permalink="https://vppraveen.wordpress.com/2018/02/28/basic-linux-commands/screenshot-from-2018-02-28-225221/"
+                    height="373"
+                    loading="lazy" sizes="(max-width: 514px) 100vw, 514px"
+                    src="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png?w=514&#038;h=373"
+                    srcset="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png?w=514&amp;h=373 514w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png?w=150&amp;h=109 150w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png?w=300&amp;h=218 300w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png 525w"
+                    width="514"/></p>
+            <p><strong>cp</strong></p>
+            <p>cp command is used to copy a file or directory. To copy files from a directory recursively
+                need to add &#8216;-r&#8217; option. We need to specify the source and destination to the
+                command, like cp 1.txt 2.txt</p>
+            <p><img alt="Screenshot from 2018-02-28 22:59:18"
+                    class="alignnone size-full wp-image-77"
+                    data-attachment-id="77"
+                    data-comments-opened="1" data-image-caption=""
+                    data-image-description=""
+                    data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                    data-image-title="Screenshot from 2018-02-28 22:59:18"
+                    data-large-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png?w=480"
+                    data-medium-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png?w=300"
+                    data-orig-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png"
+                    data-orig-size="480,110"
+                    data-permalink="https://vppraveen.wordpress.com/2018/02/28/basic-linux-commands/screenshot-from-2018-02-28-225918/"
+                    loading="lazy"
+                    sizes="(max-width: 480px) 100vw, 480px"
+                    src="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png?w=700"
+                    srcset="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png 480w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png?w=150&amp;h=34 150w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png?w=300&amp;h=69 300w"/>
+            </p>
+            <p><strong>mv</strong></p>
+            <p>mv command is used to move files or directories through the command line. We can use the same
+                command to rename a file.</p>
+            <p><img alt="Screenshot from 2018-02-28 23:02:07"
+                    class="alignnone size-full wp-image-78"
+                    data-attachment-id="78"
+                    data-comments-opened="1" data-image-caption=""
+                    data-image-description=""
+                    data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                    data-image-title="Screenshot from 2018-02-28 23:02:07"
+                    data-large-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png?w=603"
+                    data-medium-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png?w=300"
+                    data-orig-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png"
+                    data-orig-size="603,214"
+                    data-permalink="https://vppraveen.wordpress.com/2018/02/28/basic-linux-commands/screenshot-from-2018-02-28-230207/"
+                    loading="lazy"
+                    sizes="(max-width: 603px) 100vw, 603px"
+                    src="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png?w=700"
+                    srcset="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png 603w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png?w=150&amp;h=53 150w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png?w=300&amp;h=106 300w"/>
+            </p>
+            <p><strong>echo</strong></p>
+            <p>echo command simply returns whatever it is given to it, like an echo. It is helpful in some
+                data operations with the help of redirection operation.</p>
+            <p><strong>cat </strong></p>
+            <p>cat command is used to display contents of a file. It is very useful for small files.</p>
+            <p><img alt="Screenshot from 2018-02-28 23:07:49"
+                    class="alignnone size-full wp-image-79"
+                    data-attachment-id="79"
+                    data-comments-opened="1" data-image-caption=""
+                    data-image-description=""
+                    data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                    data-image-title="Screenshot from 2018-02-28 23:07:49"
+                    data-large-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png?w=607"
+                    data-medium-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png?w=300"
+                    data-orig-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png"
+                    data-orig-size="607,216"
+                    data-permalink="https://vppraveen.wordpress.com/2018/02/28/basic-linux-commands/screenshot-from-2018-02-28-230749/"
+                    loading="lazy"
+                    sizes="(max-width: 607px) 100vw, 607px"
+                    src="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png?w=700"
+                    srcset="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png 607w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png?w=150&amp;h=53 150w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png?w=300&amp;h=107 300w"/>
+            </p>
+            <p><strong>man &amp; &#8211;help</strong></p>
+            <p>To know more details about a command and how to use it, use the <strong>man</strong> command.
+                It shows the manual pages of the command. eg &#8216;man cp&#8217; will show the details of
+                the cp command.</p>
+            <p>Passing the help argument to a command will give similar information.</p>
+            <div class="command">
+                <p>$ man cp</p>
+                <p>$ cp -help</p>
+            </div>
         </div>
 
         <div class="card">
@@ -833,6 +1024,10 @@
                 <a href="#ngrep-command">ngrep</a>
                 <br>
                 <a href="#linux-networking-commands">Networking Commands</a>
+                <br>
+                <a href="#grep-command">Grep</a>
+                <br>
+                <a href="#basic-commands">Basic Commands</a>
                 <br>
             </div>
         </div>
