@@ -116,7 +116,7 @@
             color: #C1DFD2;
             padding: 20px;
             font-weight: 500;
-            font-size: 12px;
+            font-size: 14px;
             width: 70%;
             font-family: "Source Code Pro";
             /*color: #FFC0B7;*/
@@ -145,6 +145,43 @@
 
         b {
             /*color: #E6EFFF;*/
+        }
+
+        .collapsible {
+            background-color: #374B43;
+            cursor: pointer;
+            padding: 18px;
+            width: 70%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            color: #C1DFD2;
+            font-weight: 500;
+            border-bottom: #C1DFD2 solid 1px;
+        }
+
+        .collapsible:hover {
+            background-color: #25655c;
+        }
+
+        .collapsible:after {
+            content: '\002B';
+            color: #C1DFD2;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: transparent;
         }
 
     </style>
@@ -192,16 +229,160 @@
         <!--                ullamco.</p>-->
         <!--        </div>-->
 
-        <!--        <div class="card">-->
-        <!--            <h2>Docker</h2>-->
-        <!--            <h5>March 10, 2018</h5>-->
-        <!--            <p>Some text..</p>-->
-        <!--            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do-->
-        <!--                eiusmod-->
-        <!--                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud-->
-        <!--                exercitation-->
-        <!--                ullamco.</p>-->
-        <!--        </div>-->
+        <div class="card" id="docker">
+            <h2>Docker</h2>
+            <h6>Aug 16, 2020</h6>
+            <p>
+                <b>Docker</b> is a platform that allows you to build, ship, and run applications in containers.
+                It's essentially a tool that packages your application and its dependencies into a standardized unit
+                called a container. This container can then be run consistently across different environments, such as
+                development, testing, and production.
+            </p>
+            <!--            <p>-->
+            <!--                Key benefits of using Docker:-->
+            <!--            </p>-->
+            <!--            <p>-->
+            <!--                <b>Portability:</b> Containers can be easily moved between different machines or environments without-->
+            <!--                changes to the application.-->
+            <!--            </p>-->
+            <!--            <p>-->
+            <!--                <b>Isolation:</b> Each container runs in its own isolated environment, preventing conflicts between-->
+            <!--                different applications.-->
+            <!--            </p>-->
+            <!--            <p>-->
+            <!--                <b>Efficiency:</b> Docker containers are lightweight and share the host operating system's kernel,-->
+            <!--                making them more efficient than traditional virtual machines. Scalability: Docker can be used to easily-->
+            <!--                scale applications up or down based on demand.-->
+            <!--            </p>-->
+
+            <p><b>Let's see the most frequent commands used with docker</b></p>
+
+            <button type="button" class="collapsible">Image Management</button>
+            <div class="content">
+                <h3><b>Image Management</b></h3>
+                <p><i><b>Pulls 'hello-world' from a Docker registry (e.g., Docker Hub).</b></i></p>
+                <div class="command">
+                    # docker pull hello-world
+                </div>
+
+                <p><i><b>Builds an image from a Dockerfile.</b></i></p>
+                <div class="command">
+                    # docker build path_to_Dockerfile
+                </div>
+
+                <p><i><b>To Push local_image to a Docker registry.</b></i></p>
+                <div class="command">
+                    # docker push local_image
+                </div>
+
+                <p><i><b>Lists all images on your system.</b></i></p>
+                <div class="command">
+                    # docker images
+                </div>
+                <p></p>
+            </div>
+
+            <button type="button" class="collapsible">Container Management</button>
+            <div class="content">
+                <h3><b>Container Management</b></h3>
+                <p><i><b>Creates and starts a container from an image.</b></i></p>
+                <div class="command">
+                    # docker run &lt;image name&gt;
+                </div>
+
+                <p><i><b>Starts a stopped container.</b></i></p>
+                <div class="command">
+                    # docker start &lt;container_id&gt;
+                </div>
+
+                <p><i><b>Restarts a container.</b></i></p>
+                <div class="command">
+                    # docker restart &lt;container_id&gt;
+                </div>
+
+                <p><i><b>Removes a container.</b></i></p>
+                <div class="command">
+                    # docker rm &lt;container_id&gt;
+                </div>
+
+                <p><i><b>Lists all running containers.</b></i></p>
+                <div class="command">
+                    # docker ps
+                </div>
+
+                <p><i><b>Lists all containers, including stopped ones.</b></i></p>
+                <div class="command">
+                    # docker exec &lt;container_id&gt; &lt;command&gt;
+                </div>
+                <p></p>
+            </div>
+
+            <button type="button" class="collapsible">Network Management</button>
+            <div class="content">
+                <h3><b>Network Management</b></h3>
+                <p><i><b>Creates a new network.</b></i></p>
+                <div class="command">
+                    # docker network create &lt;network_name&gt;
+                </div>
+
+                <p><i><b>Lists all networks.</b></i></p>
+                <div class="command">
+                    # docker network ls
+                </div>
+
+                <p><i><b>Removes a network.</b></i></p>
+                <div class="command">
+                    # docker network rm &lt;network_name&gt;
+                </div>
+                <p></p>
+            </div>
+
+            <button type="button" class="collapsible">Volume Management</button>
+            <div class="content">
+                <h3><b>Volume Management</b></h3>
+                <p><i><b>Creates a new Volume.</b></i></p>
+                <div class="command">
+                    # docker volume create &lt;volume_name&gt;
+                </div>
+
+                <p><i><b> Lists all volumes.</b></i></p>
+                <div class="command">
+                    # docker volume ls
+                </div>
+
+                <p><i><b>Removes a Volume.</b></i></p>
+                <div class="command">
+                    # docker volume rm &lt;volume_name&gt;
+                </div>
+                <p></p>
+            </div>
+
+            <button type="button" class="collapsible">Other useful commands</button>
+            <div class="content">
+                <h3><b>Other useful commands</b></h3>
+                <p><i><b>Displays detailed information about a container.</b></i></p>
+                <div class="command">
+                    # docker inspect &lt;container_id&gt;
+                </div>
+
+                <p><i><b>Creates a new image from a container.</b></i></p>
+                <div class="command">
+                    # docker commit &lt;container_id&gt; &lt;image_name&gt;
+                </div>
+
+                <p><i><b>Removes unused containers, images, and networks.</b></i></p>
+                <div class="command">
+                    # docker system prune
+                </div>
+
+                <p><i><b>help command</b></i></p>
+                <div class="command">
+                    # docker --help
+                </div>
+            </div>
+
+
+        </div>
 
         <div id="ngrep-command" class="card">
             <h2>ngrep command</h2>
@@ -1068,8 +1249,8 @@
                 <!--                <br>-->
                 <!--                <a href="#docker-swarm">Docker Swarm</a>-->
                 <!--                <br>-->
-                <!--                <a href="#docker">Docker</a>-->
-                <!--                <br>-->
+                <a href="#docker">Docker</a>
+                <br>
                 <a href="#ngrep-command">ngrep</a>
                 <br>
                 <a href="#linux-networking-commands">Networking Commands</a>
@@ -1092,6 +1273,24 @@
 <div class="footer">
     <h5>praveen vp, praveen_v.p@outlook.com</h5>
 </div>
+
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
