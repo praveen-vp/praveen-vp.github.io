@@ -148,7 +148,7 @@
         }
 
         .collapsible {
-            background-color: #374B43;
+            background-color: #25655c;
             cursor: pointer;
             padding: 18px;
             width: 70%;
@@ -156,7 +156,7 @@
             text-align: left;
             outline: none;
             font-size: 18px;
-            color: #C1DFD2;
+            color: #FFFFFF;
             font-weight: 500;
             border-bottom: #C1DFD2 solid 1px;
         }
@@ -218,20 +218,179 @@
         <!--                ullamco.</p>-->
         <!--        </div>-->
 
-        <!--        <div class="card">-->
-        <!--            <h2>Docker Compose</h2>-->
-        <!--            <h5>March 10, 2018</h5>-->
-        <!--            <p>Some text..</p>-->
-        <!--            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do-->
-        <!--                eiusmod-->
-        <!--                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud-->
-        <!--                exercitation-->
-        <!--                ullamco.</p>-->
-        <!--        </div>-->
+        <div class="card" id="docker-compose">
+            <h2>Docker Compose</h2>
+            <p><i><b>Docker Compose</b></i>
+                is a powerful tool for managing multi-container applications. It simplifies the process of defining,
+                running, and scaling your entire application stack by using a single YAML configuration file.
+                By defining your application's services, networks, and volumes in a Compose file, you can easily
+                create and manage your entire environment with a single command. This streamlines development,
+                testing, and deployment, making it easier to collaborate and iterate on your projects.
+            </p>
+
+            <h3><b>Docker Compose File</b></h3>
+            <p>A Compose file, typically named <b>compose.yaml</b> or <b>docker-compose.yaml</b>, is placed in your
+                working directory. While compose.yaml is the preferred format, Compose supports docker-compose.yaml for
+                backward compatibility. If both files exist, Compose will prioritize compose.yaml.</p>
+
+            <button type="button" class="collapsible">Docker Compose key Commands</button>
+            <div class="content">
+                <h3><b>To start all the services defined in your compose.yaml file</b></h3>
+                <p></p>
+                <div class="command">
+                    # docker compose up
+                </div>
+
+                <p><i><b>To stop and remove the running services.</b></i></p>
+                <div class="command">
+                    # docker compose down
+                </div>
+
+                <p><i><b>If you want to monitor the output of your running containers and debug issues, you can view the
+                    logs with,
+                </b></i></p>
+                <div class="command">
+                    # docker compose logs
+                </div>
+
+                <p><i><b>To lists all the services along with their current status</b></i></p>
+                <div class="command">
+                    # docker compose ps
+                </div>
+                <p></p>
+            </div>
+
+            <button type="button" class="collapsible">Frequently Used Docker Compose Options</button>
+            <div class="content">
+
+                <p><i><b>Execute command in dry run mode</b></i></p>
+                <div class="command">
+                    --dry-run
+                </div>
+
+                <p><i><b>Specify an alternate environment file</b></i></p>
+                <div class="command">
+                    --env-file
+                </div>
+
+                <p><i><b>Multiple Compose files</b></i></p>
+                <div class="command">
+                    -f, --file
+                </div>
+
+                <p><i><b>Project name</b></i></p>
+                <div class="command">
+                    -p, --project-name
+                </div>
+                <p></p>
+            </div>
+
+            <button type="button" class="collapsible">Sample docker compose file</button>
+            <div class="content">
+                <h3>Sample docker compose file</h3>
+                <div class="syntax-light dark:syntax-dark">
+                    <div class="command"><pre tabindex="0" class="chroma"><code class="language-yml"
+                                                                                data-lang="yml"><span
+                            class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">frontend</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span
+                            class="p">:</span><span class="w"> </span><span class="l">example/webapp</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span
+                            class="s2">"443:8043"</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span
+                            class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span
+                            class="l">front-tier</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">back-tier</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">configs</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span
+                            class="l">httpd-config</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">secrets</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">server-certificate</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">backend</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span
+                            class="p">:</span><span class="w"> </span><span class="l">example/database</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">db-data:/etc/data</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span
+                            class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">back-tier</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">volumes</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">db-data</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span
+                            class="p">:</span><span class="w"> </span><span class="l">flocker</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span
+                            class="nt">driver_opts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">size</span><span
+                            class="p">:</span><span class="w"> </span><span class="s2">"10GiB"</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">configs</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span
+                            class="nt">httpd-config</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span
+                            class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">secrets</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span
+                            class="nt">server-certificate</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span
+                            class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># The presence of these objects is sufficient to define them</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span
+                            class="nt">front-tier</span><span class="p">:</span><span class="w"> </span>{}<span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">back-tier</span><span
+                            class="p">:</span><span class="w"> </span>{}</span></span></code></pre>
+                    </div>
+                </div>
+                <p></p>
+            </div>
+
+            <div>
+                <h4 style="color: #32373c">Usage</h4>
+                <p>multiple compose files </p>
+                <div class="command">
+                    # docker compose -f docker-compose.yml -f docker-compose.admin.yml run backup_db
+                </div>
+
+                <p>other options </p>
+                <div class="command">
+                    # docker compose --env-file sample.env -f sample-docker-compose.yml -p docker-compose up -d
+                </div>
+            </div>
+
+        </div>
+
 
         <div class="card" id="docker">
             <h2>Docker</h2>
-            <h6>Aug 16, 2020</h6>
+            <!--            <h6>Aug 16, 2020</h6>-->
             <p>
                 <b>Docker</b> is a platform that allows you to build, ship, and run applications in containers.
                 It's essentially a tool that packages your application and its dependencies into a standardized unit
@@ -254,6 +413,13 @@
             <!--                making them more efficient than traditional virtual machines. Scalability: Docker can be used to easily-->
             <!--                scale applications up or down based on demand.-->
             <!--            </p>-->
+
+            <div>
+                <p>See below to see the full list of docker commands <br>
+                    <a style="color: #ddd !important;" href="https://docs.docker.com/reference/cli/docker/">Docker CLI
+                        reference</a>
+                </p>
+            </div>
 
             <p><b>Let's see the most frequent commands used with docker</b></p>
 
@@ -381,7 +547,55 @@
                 </div>
             </div>
 
+            <div>
+                <h3>Docker run command line options</h3>
+                <h4>Run with a custom name</h4>
+                <div class="command">
+                    # docker run -it --name test busybox sh
+                </div>
 
+                <h4>Run an interactive shell in a new container:</h4>
+                <div class="command">
+                    # docker run -it ubuntu bash
+                </div>
+
+                <h4>Run a detached container and publish port 80:</h4>
+                <div class="command">
+                    # docker run -d -p 80:80 nginx
+                </div>
+
+                <h4>Mount a host directory into the container:</h4>
+                <div class="command">
+                    # docker run -v /path/to/host/dir:/path/to/container/dir nginx
+                </div>
+
+                <h4>Change entrypoint, to sleep for 60 </h4>
+                <div class="command">
+                    # docker run --command sleep 60 ubuntu
+                </div>
+
+                <h4>Run with multiple options</h4>
+                <div class="command">
+                    # docker run -it --rm --name my-container --network my-network --dns 8.8.8.8 --cpu-limit 2 --memory
+                    1g --device /dev/sda1 -e MY_VAR=value ubuntu bash
+                </div>
+                <h4>Explanation</h4>
+                <div class="command" style="color: black;background: #a3adad;">
+                    <p>
+                        Interactive and TTY: -it <br>
+                        Remove container on exit: --rm <br>
+                        Custom name: --name my-container <br>
+                        Custom network: --network my-network <br>
+                        Custom DNS server: --dns 8.8.8.8 <br>
+                        CPU limit: --cpu-limit 2 <br>
+                        Memory limit: --memory 1g <br>
+                        Device access: --device /dev/sda1 <br>
+                        Environment variable: -e MY_VAR=value <br>
+                        Image: ubuntu <br>
+                        Command: bash
+                    </p>
+                </div>
+            </div>
         </div>
 
         <div id="ngrep-command" class="card">
@@ -609,7 +823,7 @@
                 </p>
                 <h3 style="text-align:justify;"><span><strong>tcpdump</strong></span>
                 </h3>
-                <p style="text-align:justify;"><span>This will captures packets off a network interface and interprets them for you. It understands all basic internet protocols, and can be used to save entire packets for later inspection.</span>
+                <p style="text-align:justify;"><span>This will capture packets off a network interface and interprets them for you. It understands all basic internet protocols, and can be used to save entire packets for later inspection.</span>
                 </p>
 
                 <div class="command">
@@ -619,7 +833,8 @@
                     <br>
                     <span># tcpdump dst 192.168.65.133 and tcp -vv</span>
                 </div>
-                <p><span><img alt="tcpdump-1"
+                <p><span>
+                    <img alt="tcpdump-1"
                               class="alignnone size-full wp-image-107"
                               data-attachment-id="107"
                               data-comments-opened="1" data-image-caption=""
@@ -634,7 +849,11 @@
                               loading="lazy"
                               sizes="(max-width: 681px) 100vw, 681px"
                               src="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=700"
-                              srcset="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png 681w, https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=150&amp;h=44 150w, https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=300&amp;h=87 300w"/><img
+                         srcset="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png 681w,
+                               https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=150&amp;h=44 150w,
+                               https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=300&amp;h=87 300w"/>
+                    <p></p>
+                    <img
                         alt="tcpdump-2"
                         class="alignnone size-full wp-image-106"
                         data-attachment-id="106"
@@ -746,7 +965,11 @@
                                   loading="lazy"
                                   sizes="(max-width: 620px) 100vw, 620px"
                                   src="https://vppraveen.files.wordpress.com/2018/03/ifconfig.png?w=700"
-                                  srcset="https://vppraveen.files.wordpress.com/2018/03/ifconfig.png 620w, https://vppraveen.files.wordpress.com/2018/03/ifconfig.png?w=150&amp;h=64 150w, https://vppraveen.files.wordpress.com/2018/03/ifconfig.png?w=300&amp;h=128 300w"/><img
+                                  srcset="https://vppraveen.files.wordpress.com/2018/03/ifconfig.png 620w,
+                                   https://vppraveen.files.wordpress.com/2018/03/ifconfig.png?w=150&amp;h=64 150w,
+                                    https://vppraveen.files.wordpress.com/2018/03/ifconfig.png?w=300&amp;h=128 300w"/>
+                        <p></p>
+                        <img
                             alt="ifconfig-1"
                             class="alignnone size-full wp-image-100"
                             data-attachment-id="100"
@@ -1249,6 +1472,8 @@
                 <!--                <br>-->
                 <!--                <a href="#docker-swarm">Docker Swarm</a>-->
                 <!--                <br>-->
+                <a href="#docker-compose">Docker</a>
+                <br>
                 <a href="#docker">Docker</a>
                 <br>
                 <a href="#ngrep-command">ngrep</a>
