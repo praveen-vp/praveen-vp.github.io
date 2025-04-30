@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +16,13 @@
           rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-        .w3-bar,button {font-family: "Montserrat", sans-serif}
-        .fa-anchor,.fa-coffee {font-size:200px}
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .w3-bar, button {
+            font-family: "Montserrat", sans-serif
+        }
 
         .header {
             padding: 30px;
@@ -38,18 +43,25 @@
 <!-- Navbar -->
 <div class="w3-top">
     <div class="w3-bar main-color w3-card w3-left-align w3-large">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large main-color" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large main-color"
+           href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                class="fa fa-bars"></i></a>
         <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">praveenvp.in</a>
-        <a href="#docker-compose" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Docker Compose</a>
+        <a href="#docker-compose" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Docker
+            Compose</a>
         <a href="#docker" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Docker</a>
         <div class="w3-dropdown-hover w3-hide-small">
-            <button class="nav-dropdown">Linux Commands    <i class="fa fa-caret-down"></i></button>
+            <button class="nav-dropdown">Linux Commands <i class="fa fa-caret-down"></i></button>
             <div class="w3-dropdown-content w3-card-4 w3-bar-block">
                 <a href="#ngrep-command" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">nGrep</a>
-                <a href="#grep-command" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Grep</a>
-                <a href="#linux-networking-commands" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Networking Commands</a>
-                <a href="#basic-commands" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Basic Linux commands</a>
-                <a href="#compile-linux" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Compile Linux</a>
+                <a href="#grep-command"
+                   class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Grep</a>
+                <a href="#linux-networking-commands"
+                   class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Networking Commands</a>
+                <a href="#basic-commands" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Basic
+                    Linux commands</a>
+                <a href="#compile-linux" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Compile
+                    Linux</a>
             </div>
         </div>
     </div>
@@ -254,26 +266,27 @@
                 called a container. This container can then be run consistently across different environments, such as
                 development, testing, and production.
             </p>
-                        <p>
-                            Key benefits of using Docker:
-                        </p>
-                        <p>
-                            <b>Portability:</b> Containers can be easily moved between different machines or environments without
-                            changes to the application.
-                        </p>
-                        <p>
-                            <b>Isolation:</b> Each container runs in its own isolated environment, preventing conflicts between
-                            different applications.
-                        </p>
-                        <p>
-                            <b>Efficiency:</b> Docker containers are lightweight and share the host operating system's kernel,
-                            making them more efficient than traditional virtual machines. Scalability: Docker can be used to easily
-                            scale applications up or down based on demand.
-                        </p>
+            <p>
+                Key benefits of using Docker:
+            </p>
+            <p>
+                <b>Portability:</b> Containers can be easily moved between different machines or environments without
+                changes to the application.
+            </p>
+            <p>
+                <b>Isolation:</b> Each container runs in its own isolated environment, preventing conflicts between
+                different applications.
+            </p>
+            <p>
+                <b>Efficiency:</b> Docker containers are lightweight and share the host operating system's kernel,
+                making them more efficient than traditional virtual machines. Scalability: Docker can be used to easily
+                scale applications up or down based on demand.
+            </p>
 
             <div>
                 <p>See below to see the full list of docker commands <br>
-                    <a style="color: #31302e !important;" href="https://docs.docker.com/reference/cli/docker/">Docker CLI
+                    <a style="color: #31302e !important;" href="https://docs.docker.com/reference/cli/docker/">Docker
+                        CLI
                         reference</a>
                 </p>
             </div>
@@ -282,7 +295,7 @@
 
             <button type="button" class="collapsible">Image Management</button>
             <div class="content">
-<!--                <h3><b>Image Management</b></h3>-->
+                <!--                <h3><b>Image Management</b></h3>-->
                 <p><i><b>Pulls 'hello-world' from a Docker registry (e.g., Docker Hub).</b></i></p>
                 <div class="command">
                     # docker pull hello-world
@@ -307,7 +320,7 @@
 
             <button type="button" class="collapsible">Container Management</button>
             <div class="content">
-<!--                <h3><b>Container Management</b></h3>-->
+                <!--                <h3><b>Container Management</b></h3>-->
                 <p><i><b>Creates and starts a container from an image.</b></i></p>
                 <div class="command">
                     # docker run &lt;image name&gt;
@@ -342,7 +355,7 @@
 
             <button type="button" class="collapsible">Network Management</button>
             <div class="content">
-<!--                <h3><b>Network Management</b></h3>-->
+                <!--                <h3><b>Network Management</b></h3>-->
                 <p><i><b>Creates a new network.</b></i></p>
                 <div class="command">
                     # docker network create &lt;network_name&gt;
@@ -362,7 +375,7 @@
 
             <button type="button" class="collapsible">Volume Management</button>
             <div class="content">
-<!--                <h3><b>Volume Management</b></h3>-->
+                <!--                <h3><b>Volume Management</b></h3>-->
                 <p><i><b>Creates a new Volume.</b></i></p>
                 <div class="command">
                     # docker volume create &lt;volume_name&gt;
@@ -382,7 +395,7 @@
 
             <button type="button" class="collapsible">Other useful commands</button>
             <div class="content">
-<!--                <h3><b>Other useful commands</b></h3>-->
+                <!--                <h3><b>Other useful commands</b></h3>-->
                 <p><i><b>Displays detailed information about a container.</b></i></p>
                 <div class="command">
                     # docker inspect &lt;container_id&gt;
@@ -1309,6 +1322,7 @@
                 all and be patient while compiling kernel, it will take a while!!</p>
         </div>
     </div>
+</div>
 
 <!--&lt;!&ndash; First Grid &ndash;&gt;-->
 <!--<div class="w3-row-padding w3-padding-64 w3-container">-->
@@ -1374,10 +1388,10 @@
         }
     }
 
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
-        for (i = 0; i < coll.length; i++) {
+    for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
