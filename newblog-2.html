@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css" media="all"/>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+        .w3-bar,button {font-family: "Montserrat", sans-serif}
+        .fa-anchor,.fa-coffee {font-size:200px}
+
+        .header {
+            padding: 30px;
+            font-size: 40px;
+            text-align: center;
+            font-family: "Audiowide", sans-serif !important;
+            text-shadow: 5px 5px 5px #ababab;
+        }
+
+        .main-color {
+            background-color: #DDA853;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar main-color w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large main-color" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">praveenvp.in</a>
+        <a href="#docker-compose" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Docker Compose</a>
+        <a href="#docker" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Docker</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="nav-dropdown">Linux Commands    <i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                <a href="#ngrep-command" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">nGrep</a>
+                <a href="#grep-command" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Grep</a>
+                <a href="#linux-networking-commands" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Networking Commands</a>
+                <a href="#basic-commands" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Basic Linux commands</a>
+                <a href="#compile-linux" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Compile Linux</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#docker-compose" class="w3-bar-item w3-button w3-padding-large">Docker Compose</a>
+        <a href="#docker" class="w3-bar-item w3-button w3-padding-large">Docker</a>
+        <a href="#ngrep-command" class="w3-bar-item w3-button w3-padding-large">nGrep</a>
+        <a href="#grep-command" class="w3-bar-item w3-button w3-padding-large">Grep</a>
+        <a href="#linux-networking-commands" class="w3-bar-item w3-button w3-padding-large">Networking Commands</a>
+        <a href="#basic-commands" class="w3-bar-item w3-button w3-padding-large">Basic Linux commands</a>
+        <a href="#compile-linux" class="w3-bar-item w3-button w3-padding-large">Compile Linux</a>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container main-color w3-center" style="padding:128px 16px;">
+    <h1 class="w3-margin w3-jumbo header">praveenvp.in</h1>
+<!--    <p class="w3-xlarge"></p>-->
+<!--    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
+/ ,
+<div class="row">
+    <div class="leftcolumn">
+        <div id="docker-compose"></div>
+        <div class="card" id="docker-compose-body">
+            <h2>Docker Compose</h2>
+            <p><i><b>Docker Compose</b></i>
+                is a powerful tool for managing multi-container applications. It simplifies the process of defining,
+                running, and scaling your entire application stack by using a single YAML configuration file.
+                By defining your application's services, networks, and volumes in a Compose file, you can easily
+                create and manage your entire environment with a single command. This streamlines development,
+                testing, and deployment, making it easier to collaborate and iterate on your projects.
+            </p>
+
+            <h3><b>Docker Compose File</b></h3>
+            <p>A Compose file, typically named <b>compose.yaml</b> or <b>docker-compose.yaml</b>, is placed in your
+                working directory. While compose.yaml is the preferred format, Compose supports docker-compose.yaml for
+                backward compatibility. If both files exist, Compose will prioritize compose.yaml.</p>
+
+            <button type="button" class="collapsible">Docker Compose key Commands</button>
+            <div class="content">
+                <h3>To start all the services defined in your compose.yaml file</h3>
+                <p></p>
+                <div class="command">
+                    # docker compose up
+                </div>
+
+                <p><i><b>To stop and remove the running services.</b></i></p>
+                <div class="command">
+                    # docker compose down
+                </div>
+
+                <p><i><b>If you want to monitor the output of your running containers and debug issues, you can view the
+                    logs with,
+                </b></i></p>
+                <div class="command">
+                    # docker compose logs
+                </div>
+
+                <p><i><b>To lists all the services along with their current status</b></i></p>
+                <div class="command">
+                    # docker compose ps
+                </div>
+                <p></p>
+            </div>
+
+            <button type="button" class="collapsible">Frequently Used Docker Compose Options</button>
+            <div class="content">
+
+                <p><i><b>Execute command in dry run mode</b></i></p>
+                <div class="command">
+                    --dry-run
+                </div>
+
+                <p><i><b>Specify an alternate environment file</b></i></p>
+                <div class="command">
+                    --env-file
+                </div>
+
+                <p><i><b>Multiple Compose files</b></i></p>
+                <div class="command">
+                    -f, --file
+                </div>
+
+                <p><i><b>Project name</b></i></p>
+                <div class="command">
+                    -p, --project-name
+                </div>
+                <p></p>
+            </div>
+
+            <button type="button" class="collapsible">Sample docker compose file</button>
+            <div class="content">
+                <h3>Sample docker compose file</h3>
+                <div class="syntax-light dark:syntax-dark">
+                    <div class="command"><pre tabindex="0" class="chroma"><code class="language-yml"
+                                                                                data-lang="yml"><span
+                            class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">frontend</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span
+                            class="p">:</span><span class="w"> </span><span class="l">example/webapp</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span
+                            class="s2">"443:8043"</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span
+                            class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span
+                            class="l">front-tier</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">back-tier</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">configs</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span
+                            class="l">httpd-config</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">secrets</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">server-certificate</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">backend</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span
+                            class="p">:</span><span class="w"> </span><span class="l">example/database</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">db-data:/etc/data</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span
+                            class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">back-tier</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">volumes</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">db-data</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span
+                            class="p">:</span><span class="w"> </span><span class="l">flocker</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span
+                            class="nt">driver_opts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">size</span><span
+                            class="p">:</span><span class="w"> </span><span class="s2">"10GiB"</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">configs</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span
+                            class="nt">httpd-config</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span
+                            class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">secrets</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span
+                            class="nt">server-certificate</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span
+                            class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span
+                            class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># The presence of these objects is sufficient to define them</span><span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span
+                            class="nt">front-tier</span><span class="p">:</span><span class="w"> </span>{}<span
+                            class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">back-tier</span><span
+                            class="p">:</span><span class="w"> </span>{}</span></span></code></pre>
+                    </div>
+                </div>
+                <p></p>
+            </div>
+
+            <div>
+                <h4 style="color: #32373c">Usage</h4>
+                <p>multiple compose files </p>
+                <div class="command">
+                    # docker compose -f docker-compose.yml -f docker-compose.admin.yml run backup_db
+                </div>
+
+                <p>other options </p>
+                <div class="command">
+                    # docker compose --env-file sample.env -f sample-docker-compose.yml -p docker-compose up -d
+                </div>
+            </div>
+
+        </div>
+
+        <div id="docker"></div>
+        <div class="card" id="docker-body">
+            <h2>Docker</h2>
+            <!--            <h6>Aug 16, 2020</h6>-->
+            <p>
+                <b>Docker</b> is a platform that allows you to build, ship, and run applications in containers.
+                It's essentially a tool that packages your application and its dependencies into a standardized unit
+                called a container. This container can then be run consistently across different environments, such as
+                development, testing, and production.
+            </p>
+                        <p>
+                            Key benefits of using Docker:
+                        </p>
+                        <p>
+                            <b>Portability:</b> Containers can be easily moved between different machines or environments without
+                            changes to the application.
+                        </p>
+                        <p>
+                            <b>Isolation:</b> Each container runs in its own isolated environment, preventing conflicts between
+                            different applications.
+                        </p>
+                        <p>
+                            <b>Efficiency:</b> Docker containers are lightweight and share the host operating system's kernel,
+                            making them more efficient than traditional virtual machines. Scalability: Docker can be used to easily
+                            scale applications up or down based on demand.
+                        </p>
+
+            <div>
+                <p>See below to see the full list of docker commands <br>
+                    <a style="color: #31302e !important;" href="https://docs.docker.com/reference/cli/docker/">Docker CLI
+                        reference</a>
+                </p>
+            </div>
+
+            <p><b>Let's see the most frequent commands used with docker</b></p>
+
+            <button type="button" class="collapsible">Image Management</button>
+            <div class="content">
+<!--                <h3><b>Image Management</b></h3>-->
+                <p><i><b>Pulls 'hello-world' from a Docker registry (e.g., Docker Hub).</b></i></p>
+                <div class="command">
+                    # docker pull hello-world
+                </div>
+
+                <p><i><b>Builds an image from a Dockerfile.</b></i></p>
+                <div class="command">
+                    # docker build path_to_Dockerfile
+                </div>
+
+                <p><i><b>To Push local_image to a Docker registry.</b></i></p>
+                <div class="command">
+                    # docker push local_image
+                </div>
+
+                <p><i><b>Lists all images on your system.</b></i></p>
+                <div class="command">
+                    # docker images
+                </div>
+                <p></p>
+            </div>
+
+            <button type="button" class="collapsible">Container Management</button>
+            <div class="content">
+<!--                <h3><b>Container Management</b></h3>-->
+                <p><i><b>Creates and starts a container from an image.</b></i></p>
+                <div class="command">
+                    # docker run &lt;image name&gt;
+                </div>
+
+                <p><i><b>Starts a stopped container.</b></i></p>
+                <div class="command">
+                    # docker start &lt;container_id&gt;
+                </div>
+
+                <p><i><b>Restarts a container.</b></i></p>
+                <div class="command">
+                    # docker restart &lt;container_id&gt;
+                </div>
+
+                <p><i><b>Removes a container.</b></i></p>
+                <div class="command">
+                    # docker rm &lt;container_id&gt;
+                </div>
+
+                <p><i><b>Lists all running containers.</b></i></p>
+                <div class="command">
+                    # docker ps
+                </div>
+
+                <p><i><b>Lists all containers, including stopped ones.</b></i></p>
+                <div class="command">
+                    # docker exec &lt;container_id&gt; &lt;command&gt;
+                </div>
+                <p></p>
+            </div>
+
+            <button type="button" class="collapsible">Network Management</button>
+            <div class="content">
+<!--                <h3><b>Network Management</b></h3>-->
+                <p><i><b>Creates a new network.</b></i></p>
+                <div class="command">
+                    # docker network create &lt;network_name&gt;
+                </div>
+
+                <p><i><b>Lists all networks.</b></i></p>
+                <div class="command">
+                    # docker network ls
+                </div>
+
+                <p><i><b>Removes a network.</b></i></p>
+                <div class="command">
+                    # docker network rm &lt;network_name&gt;
+                </div>
+                <p></p>
+            </div>
+
+            <button type="button" class="collapsible">Volume Management</button>
+            <div class="content">
+<!--                <h3><b>Volume Management</b></h3>-->
+                <p><i><b>Creates a new Volume.</b></i></p>
+                <div class="command">
+                    # docker volume create &lt;volume_name&gt;
+                </div>
+
+                <p><i><b> Lists all volumes.</b></i></p>
+                <div class="command">
+                    # docker volume ls
+                </div>
+
+                <p><i><b>Removes a Volume.</b></i></p>
+                <div class="command">
+                    # docker volume rm &lt;volume_name&gt;
+                </div>
+                <p></p>
+            </div>
+
+            <button type="button" class="collapsible">Other useful commands</button>
+            <div class="content">
+<!--                <h3><b>Other useful commands</b></h3>-->
+                <p><i><b>Displays detailed information about a container.</b></i></p>
+                <div class="command">
+                    # docker inspect &lt;container_id&gt;
+                </div>
+
+                <p><i><b>Creates a new image from a container.</b></i></p>
+                <div class="command">
+                    # docker commit &lt;container_id&gt; &lt;image_name&gt;
+                </div>
+
+                <p><i><b>Removes unused containers, images, and networks.</b></i></p>
+                <div class="command">
+                    # docker system prune
+                </div>
+
+                <p><i><b>help command</b></i></p>
+                <div class="command">
+                    # docker --help
+                </div>
+            </div>
+
+            <div>
+                <h3>Docker run command line options</h3>
+                <h4>Run with a custom name</h4>
+                <div class="command">
+                    # docker run -it --name test busybox sh
+                </div>
+
+                <h4>Run an interactive shell in a new container:</h4>
+                <div class="command">
+                    # docker run -it ubuntu bash
+                </div>
+
+                <h4>Run a detached container and publish port 80:</h4>
+                <div class="command">
+                    # docker run -d -p 80:80 nginx
+                </div>
+
+                <h4>Mount a host directory into the container:</h4>
+                <div class="command">
+                    # docker run -v /path/to/host/dir:/path/to/container/dir nginx
+                </div>
+
+                <h4>Change entrypoint, to sleep for 60 </h4>
+                <div class="command">
+                    # docker run --command sleep 60 ubuntu
+                </div>
+
+                <h4>Run with multiple options</h4>
+                <div class="command">
+                    # docker run -it --rm --name my-container --network my-network --dns 8.8.8.8 --cpu-limit 2 --memory
+                    1g --device /dev/sda1 -e MY_VAR=value ubuntu bash
+                </div>
+                <h4>Explanation</h4>
+                <div class="command" style="color: black;background: #a3adad;">
+                    <p>
+                        Interactive and TTY: -it <br>
+                        Remove container on exit: --rm <br>
+                        Custom name: --name my-container <br>
+                        Custom network: --network my-network <br>
+                        Custom DNS server: --dns 8.8.8.8 <br>
+                        CPU limit: --cpu-limit 2 <br>
+                        Memory limit: --memory 1g <br>
+                        Device access: --device /dev/sda1 <br>
+                        Environment variable: -e MY_VAR=value <br>
+                        Image: ubuntu <br>
+                        Command: bash
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ngrep-command"></div>
+        <div id="ngrep-command-body" class="card">
+            <h2>ngrep command</h2>
+            <h6>MARCH 20, 2018</h6>
+            <p><b>Network grep or 'ngrep'</b>, is a tool which performs most of GNU grep's common
+                features,
+                applying them to the network layer.
+                As per Linux man page, ngrep is a pcap-aware tool that will allow you to specify extended regular
+                expressions to match against data payloads of packets.
+                It currently recognizes TCP, UDP and ICMP across Ethernet, PPP, SLIP, FDDI and null interfaces,
+                and understands bpf filter logic in the same fashion as more common packet sniffing tools,
+                such as <b>tcpdump</b> and <b>snoop</b>.
+            </p>
+
+            <h4>Basic Usage</h4>
+            <div class="command">
+                $ ngrep 'Linux' -q
+            </div>
+            <p>
+                The above command will filter the packets which contain the word 'Linux'. The option 'q' as per man
+                page 'Be quiet; don't output any information other than packet headers and their payloads (if
+                relevant)'.
+                It is good to have -q every time.
+            </p>
+            <p>
+                We can add more searching options which we will be using with grep command. Few examples are below.
+            </p>
+            <div class="command">
+                $ ngrep -i 'Linux' -q // case-insensitive
+                <br>
+                $ ngrep -iv 'Linux' -q // case-insensitive and inverse match
+                <br>
+                $ ngrep -wi 'Linux' -q // case-insensitive exact word 'linux'
+                <br>
+            </div>
+            <h5>$ ngrep -W byline -q</h5>
+            <p>
+                The <b>'byline'</b> option is a nice one like 'q' which will print the detail in a good format which is
+                easy to
+                read. Other option available are <b>'normal|single|none'</b>. As per my opinion, the most useful option
+                is byline.
+            </p>
+            <p>Options</p>
+            <div class="command">
+                $ ngrep -W normal -q
+                <br>
+                $ ngrep -W single -q
+                <br>
+                $ ngrep -W none -q
+                <br>
+            </div>
+            <h5>Commonly Used 'bpf' filter options</h5>
+            <div class="command" style="width: 70%">
+                $ ngrep -q 'req' 'host 192.168' // matches all headers containing the string 'req' sent to or from the
+                ip address starting with 192.168
+                <br>
+                <br>
+                $ ngrep -q 'req' 'dst host 192.168' // will do same as above, but instead match a destination host
+                <br>
+                <br>
+                $ ngrep -q 'req' 'src host 192.168' // will do same as above, but instead match a source host
+            </div>
+            <h5>Protocol matching</h5>
+            <div class="command">
+                $ ngrep -q 'req' 'tcp'
+                <br>
+                $ ngrep -q 'req' 'udp'
+                <br>
+                $ ngrep -q 'req' 'icmp'
+                <br>
+            </div>
+            <h5>Examples</h5>
+            <div class="command">
+        <pre>
+<strong>[root@localhost ~]# ngrep 'testProject' 'tcp' -W byline -q </strong>
+<span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
+<span>filter: (ip or ip6) and ( tcp )</span>
+<span>match: testProject</span>
+<span>T 112.110.93.73:25749 -&gt; 10.10.20.62:80 [AP]</span>
+<span>POST /testProject/test/1.0.0 HTTP/1.1.</span>
+<span>Cookie: JSESSIONID=CB3ECA25FFD315BFD3774EB4D6B461FA.e; Path=/testProject/; HttpOnly.</span>
+<span>LOGINTYPE: loginType=POST.</span>
+<span>Content-Length: 256.</span>
+<span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
+<span>Host: test.praveen-vp.com.</span>
+<span>Connection: Keep-Alive.</span>
+<span>.</span>
+{"request":{"value": "test","response_format":"json"}}
+        </pre>
+            </div>
+            <h5></h5>
+            <div class="command">
+<pre><span><strong>[root@localhost ~]# ngrep 'testProject' -W byline -q -t </strong></span>
+<span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
+<span>match: testProject</span>
+
+<span>T 2018/03/20 11:25:59.214139 42.106.242.219:34954 -&gt; 10.10.20.62:80 [AP]</span>
+<span>POST /testProject/test/1.0.0 HTTP/1.1.</span>
+<span>Cookie: JSESSIONID=1E0A606786521013AFEFCA51817A2116.b; Path=/testProject/; HttpOnly.</span>
+<span>Content-Length: 256.</span>
+<span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
+<span>Host: test.praveen-vp.com.</span>
+<span>Connection: Keep-Alive.</span>
+<span>.</span>
+<span>{"request":{"value": "test","response_format":"json"}}</span></pre>
+
+            </div>
+            <h5>ngrep with port</h5>
+            <div class="command">
+<pre>
+<span><strong>[root@localhost ~]# ngrep 'testProject' 'tcp' port 9030 -W byline -q -t </strong></span>
+<span>interface: eth0 (10.10.20.0/255.255.255.0)</span>
+<span>filter: (ip or ip6) and ( tcp port 9030 )</span>
+<span>match: testProject</span>
+
+<span>T 2018/03/20 11:47:01.927515 10.10.20.62:36746 -&gt; 10.10.56.233:9030 [AP]</span>
+<span>POST /testProject/login/1.0.0 HTTP/1.0.</span>
+<span>X-Real-IP: 192.168.10.195.</span>
+<span>X-Forwarded-For:192.168.10.195.</span>
+<span>Host:test.praveen-vp.com.</span>
+<span>Connection: close.</span>
+<span>Content-Length: 198.</span>
+<span>Cookie: JSESSIONID=B9D6B5DC553C128FCFE690B538A723C4.a; Path=/testProject/; Secure; HttpOnly.</span>
+<span>LOGINTYPE: loginType=PRE.</span>
+<span>Content-Type: application/x-www-form-urlencoded; charset=UTF-8.</span>
+<span>.</span>
+<span>{"request":{"value": "test","response_format":"json"}}</span>
+</pre>
+            </div>
+            <h5>ngrep the database port</h5>
+            <div class="command">
+<pre>
+<span>[root@localhost]# </span>
+<span><strong>[root@localhost]# ngrep 'REGISTRATION' port 1521 -q -W byline -T</strong></span>
+<span>interface: eth1 (10.10.56.128/255.255.255.128)</span>
+<span>filter: (ip or ip6) and ( port 1521 )</span>
+<span>match: REGISTRATION</span>
+
+<span>T +58.501281 10.10.56.233:39990 -&gt; 10.10.56.231:1521 [AP]</span>
+<span>...........i.......^...)................</span>
+<span>.......................select CREATED_AT, LAST_LOGGED_AT FROM</span>
+<span> REGISTRATION_TABLE WHERE APP_ID = :1 AND STATUS = 'ACT' ORDER BY CREATED_AT DESC </span>
+<span>.................... .............. .......... 3ceb10b1d80acc72c0f62681e0045859</span>
+</pre>
+            </div>
+        </div>
+        <div id="linux-networking-commands"></div>
+        <div id="linux-networking-commands-body" class="card">
+            <h2>Linux Networking Commands</h2>
+            <h6>March 10, 2018</h6>
+            <div class="entry-content">
+                <h3 style="text-align:justify;"><span><strong>ping </strong></span></h3>
+                <p style="text-align:justify;"><span>The ping command sends echo requests to the host you specify on the command line, and lists the responses received their round trip time. ping will send echo request indefinitely until you stop by <em><strong>ctrl+c</strong></em> (SIGINT). You can also add -c option to send a fixed number of requests.</span>
+                </p>
+                <p><span><img alt="ping"
+                              class="alignnone size-full wp-image-92"
+                              data-attachment-id="92"
+                              data-comments-opened="1" data-image-caption=""
+                              data-image-description=""
+                              data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                              data-image-title="ping"
+                              data-large-file="https://vppraveen.files.wordpress.com/2018/03/ping.png?w=540"
+                              data-medium-file="https://vppraveen.files.wordpress.com/2018/03/ping.png?w=300"
+                              data-orig-file="https://vppraveen.files.wordpress.com/2018/03/ping.png"
+                              data-orig-size="540,286"
+                              data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/ping/"
+                              sizes="(max-width: 540px) 100vw, 540px"
+                              src="https://vppraveen.files.wordpress.com/2018/03/ping.png?w=700"
+                              srcset="https://vppraveen.files.wordpress.com/2018/03/ping.png 540w, https://vppraveen.files.wordpress.com/2018/03/ping.png?w=150&amp;h=79 150w, https://vppraveen.files.wordpress.com/2018/03/ping.png?w=300&amp;h=159 300w"/></span>
+                </p>
+                <h3><span><strong>telnet</strong></span></h3>
+                <p style="text-align:justify;"><span>The telnet command is used for interactive communication with another host using the TELNET protocol. It begins in command mode, where it prints a telnet prompt (&#8220;telnet&gt; &#8220;). If telnet is invoked with a host argument, it performs an open command implicitly; see the description below.</span>
+                </p>
+                <p><span><img alt="telnet"
+                              class="alignnone size-full wp-image-109"
+                              data-attachment-id="109"
+                              data-comments-opened="1" data-image-caption=""
+                              data-image-description=""
+                              data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                              data-image-title="telnet"
+                              data-large-file="https://vppraveen.files.wordpress.com/2018/03/telnet1.png?w=477"
+                              data-medium-file="https://vppraveen.files.wordpress.com/2018/03/telnet1.png?w=300"
+                              data-orig-file="https://vppraveen.files.wordpress.com/2018/03/telnet1.png"
+                              data-orig-size="477,123"
+                              data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/telnet-2/"
+                              sizes="(max-width: 477px) 100vw, 477px"
+                              src="https://vppraveen.files.wordpress.com/2018/03/telnet1.png?w=700"
+                              srcset="https://vppraveen.files.wordpress.com/2018/03/telnet1.png 477w, https://vppraveen.files.wordpress.com/2018/03/telnet1.png?w=150&amp;h=39 150w, https://vppraveen.files.wordpress.com/2018/03/telnet1.png?w=300&amp;h=77 300w"/></span>
+                </p>
+                <p><img alt="Screenshot from 2018-03-10 13-40-09"
+                        class="alignnone size-full wp-image-115"
+                        data-attachment-id="115"
+                        data-comments-opened="1" data-image-caption=""
+                        data-image-description=""
+                        data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                        data-image-title="Screenshot from 2018-03-10 13-40-09"
+                        data-large-file="https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-40-09.png?w=345"
+                        data-medium-file="https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-40-09.png?w=300"
+                        data-orig-file="https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-40-09.png"
+                        data-orig-size="345,85"
+                        data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/screenshot-from-2018-03-10-13-40-09/"
+                        sizes="(max-width: 345px) 100vw, 345px"
+                        src="https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-40-09.png?w=700"
+                        srcset="https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-40-09.png 345w, https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-40-09.png?w=150&amp;h=37 150w, https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-40-09.png?w=300&amp;h=74 300w"/>
+                </p>
+                <h3><span><strong>netstat</strong></span></h3>
+                <p style="text-align:justify;"><span>Displays contents of /proc/net files. It works with the Linux Network Subsystem, it will tell you what the status of ports are ie. open, closed, waiting, masquerade connections and few other details.</span>
+                </p>
+                <p><span><img alt="netstat-2"
+                              class="alignnone size-full wp-image-99"
+                              data-attachment-id="99"
+                              data-comments-opened="1" data-image-caption=""
+                              data-image-description=""
+                              data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                              data-image-title="netstat-2"
+                              data-large-file="https://vppraveen.files.wordpress.com/2018/03/netstat-2.png?w=647"
+                              data-medium-file="https://vppraveen.files.wordpress.com/2018/03/netstat-2.png?w=300"
+                              data-orig-file="https://vppraveen.files.wordpress.com/2018/03/netstat-2.png"
+                              data-orig-size="647,159"
+                              data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/netstat-2/"
+                              loading="lazy"
+                              sizes="(max-width: 647px) 100vw, 647px"
+                              src="https://vppraveen.files.wordpress.com/2018/03/netstat-2.png?w=700"
+                              srcset="https://vppraveen.files.wordpress.com/2018/03/netstat-2.png 647w, https://vppraveen.files.wordpress.com/2018/03/netstat-2.png?w=150&amp;h=37 150w, https://vppraveen.files.wordpress.com/2018/03/netstat-2.png?w=300&amp;h=74 300w"/></span>
+                </p>
+                <h3 style="text-align:justify;"><span><strong>tcpdump</strong></span>
+                </h3>
+                <p style="text-align:justify;"><span>This will capture packets off a network interface and interprets them for you. It understands all basic internet protocols, and can be used to save entire packets for later inspection.</span>
+                </p>
+
+                <div class="command">
+                    <b>usage examples : </b>
+                    <br>
+                    <span># tcpdump port 22</span>
+                    <br>
+                    <span># tcpdump dst 192.168.65.133 and tcp -vv</span>
+                </div>
+                <p><span>
+                    <img alt="tcpdump-1"
+                         class="alignnone size-full wp-image-107"
+                         data-attachment-id="107"
+                         data-comments-opened="1" data-image-caption=""
+                         data-image-description=""
+                         data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                         data-image-title="tcpdump-1"
+                         data-large-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=681"
+                         data-medium-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=300"
+                         data-orig-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png"
+                         data-orig-size="681,198"
+                         data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/tcpdump-1-2/"
+                         loading="lazy"
+                         sizes="(max-width: 681px) 100vw, 681px"
+                         src="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=700"
+                         srcset="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png 681w,
+                               https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=150&amp;h=44 150w,
+                               https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=300&amp;h=87 300w"/>
+                    <p></p>
+                    <img
+                            alt="tcpdump-2"
+                            class="alignnone size-full wp-image-106"
+                            data-attachment-id="106"
+                            data-comments-opened="1" data-image-caption=""
+                            data-image-description=""
+                            data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                            data-image-title="tcpdump-2"
+                            data-large-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=700"
+                            data-medium-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=300"
+                            data-orig-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png"
+                            data-orig-size="727,444"
+                            data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/tcpdump-2-2/"
+                            loading="lazy" sizes="(max-width: 727px) 100vw, 727px"
+                            src="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=700"
+                            srcset="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png 727w, https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=150&amp;h=92 150w, https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=300&amp;h=183 300w"/></span>
+                </p>
+                <h3><span><strong>hostname</strong></span></h3>
+                <p style="text-align:justify;">
+                    <span>Tells the user the host name of the computer they are logged into.</span>
+                </p>
+                <div class="command">$ hostname</div>
+                <p><span><img alt="hostname"
+                              class="alignnone size-full wp-image-105"
+                              data-attachment-id="105"
+                              data-comments-opened="1" data-image-caption=""
+                              data-image-description=""
+                              data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                              data-image-title="hostname"
+                              data-large-file="https://vppraveen.files.wordpress.com/2018/03/hostname1.png?w=467"
+                              data-medium-file="https://vppraveen.files.wordpress.com/2018/03/hostname1.png?w=300"
+                              data-orig-file="https://vppraveen.files.wordpress.com/2018/03/hostname1.png"
+                              data-orig-size="467,66"
+                              data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/hostname-2/"
+                              loading="lazy"
+                              sizes="(max-width: 467px) 100vw, 467px"
+                              src="https://vppraveen.files.wordpress.com/2018/03/hostname1.png?w=700"
+                              srcset="https://vppraveen.files.wordpress.com/2018/03/hostname1.png 467w, https://vppraveen.files.wordpress.com/2018/03/hostname1.png?w=150&amp;h=21 150w, https://vppraveen.files.wordpress.com/2018/03/hostname1.png?w=300&amp;h=42 300w"/></span>
+                </p>
+                <h3><span><strong>traceroute</strong></span></h3>
+                <p style="text-align:justify;"><span>traceroute will show the route of a packet. It attempts to list the series of hosts through which your packets travel on their way to a given destination.</span>
+                </p>
+                <div class="command">
+                    # traceroute google.com
+                    <br>
+                    # traceroute 192.168.22.133
+                </div>
+
+                <p style="text-align:justify;"><span><img alt="traceroute"
+                                                          class=" size-full wp-image-86 aligncenter"
+                                                          data-attachment-id="86"
+                                                          data-comments-opened="1"
+                                                          data-image-caption=""
+                                                          data-image-description=""
+                                                          data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                                                          data-image-title="traceroute"
+                                                          data-large-file="https://vppraveen.files.wordpress.com/2018/03/traceroute.png?w=700"
+                                                          data-medium-file="https://vppraveen.files.wordpress.com/2018/03/traceroute.png?w=300"
+                                                          data-orig-file="https://vppraveen.files.wordpress.com/2018/03/traceroute.png"
+                                                          data-orig-size="1100,252"
+                                                          data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/traceroute/"
+                                                          loading="lazy"
+                                                          sizes="(max-width: 1100px) 100vw, 1100px"
+                                                          src="https://vppraveen.files.wordpress.com/2018/03/traceroute.png?w=700"
+                                                          srcset="https://vppraveen.files.wordpress.com/2018/03/traceroute.png 1100w, https://vppraveen.files.wordpress.com/2018/03/traceroute.png?w=150&amp;h=34 150w, https://vppraveen.files.wordpress.com/2018/03/traceroute.png?w=300&amp;h=69 300w, https://vppraveen.files.wordpress.com/2018/03/traceroute.png?w=768&amp;h=176 768w, https://vppraveen.files.wordpress.com/2018/03/traceroute.png?w=1024&amp;h=235 1024w"/></span>
+                </p>
+                <h3><span><strong>nmap</strong></span></h3>
+                <p style="text-align:justify;"><span>It is a poweful network exploration tool and security scanner, nmap is a very advanced network tool used to query machines (local or remote) as to whether they are up and what ports are open on these machines. </span>
+                </p>
+                <div class="command"># nmap -v -A scanme.nmap.org</div>
+                <p><span><img alt="nmap"
+                              class="alignnone size-full wp-image-85"
+                              data-attachment-id="85"
+                              data-comments-opened="1" data-image-caption=""
+                              data-image-description=""
+                              data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                              data-image-title="nmap"
+                              data-large-file="https://vppraveen.files.wordpress.com/2018/03/nmap.png?w=659"
+                              data-medium-file="https://vppraveen.files.wordpress.com/2018/03/nmap.png?w=300"
+                              data-orig-file="https://vppraveen.files.wordpress.com/2018/03/nmap.png"
+                              data-orig-size="659,230"
+                              data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/nmap/"
+                              loading="lazy"
+                              sizes="(max-width: 659px) 100vw, 659px"
+                              src="https://vppraveen.files.wordpress.com/2018/03/nmap.png?w=700"
+                              srcset="https://vppraveen.files.wordpress.com/2018/03/nmap.png 659w, https://vppraveen.files.wordpress.com/2018/03/nmap.png?w=150&amp;h=52 150w, https://vppraveen.files.wordpress.com/2018/03/nmap.png?w=300&amp;h=105 300w"/></span>
+                </p>
+                <h3><span><strong>iftop</strong></span></h3>
+                <p><span
+                > iftop &#8211; display bandwidth usage on an interface by host</span>
+                </p>
+                <h3><span><strong>ifconfig</strong></span></h3>
+                <div>
+                    <p style="text-align:justify;"><span>        ifconfig is used to configure the kernel-resident network interfaces. It is used at boot time to set up interfaces as necessary. After that, it is usually only needed when debugging or when system tuning is needed. </span>
+                    </p>
+                    <p style="text-align:justify;"><span>    If no arguments are given, ifconfig displays the status of the currently active interfaces. If a single interface argument is given, it displays the status of the given interface only; if a single &#8216;-a&#8217; argument is given, it displays the status of all interfaces, even those that are down. Otherwise, it configures an interface.</span>
+                    </p>
+                    <p><span><img alt="ifconfig"
+                                  class="alignnone size-full wp-image-102"
+                                  data-attachment-id="102"
+                                  data-comments-opened="1" data-image-caption=""
+                                  data-image-description=""
+                                  data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                                  data-image-title="ifconfig"
+                                  data-large-file="https://vppraveen.files.wordpress.com/2018/03/ifconfig.png?w=620"
+                                  data-medium-file="https://vppraveen.files.wordpress.com/2018/03/ifconfig.png?w=300"
+                                  data-orig-file="https://vppraveen.files.wordpress.com/2018/03/ifconfig.png"
+                                  data-orig-size="620,265"
+                                  data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/ifconfig/"
+                                  loading="lazy"
+                                  sizes="(max-width: 620px) 100vw, 620px"
+                                  src="https://vppraveen.files.wordpress.com/2018/03/ifconfig.png?w=700"
+                                  srcset="https://vppraveen.files.wordpress.com/2018/03/ifconfig.png 620w,
+                                   https://vppraveen.files.wordpress.com/2018/03/ifconfig.png?w=150&amp;h=64 150w,
+                                    https://vppraveen.files.wordpress.com/2018/03/ifconfig.png?w=300&amp;h=128 300w"/>
+                        <p></p>
+                        <img
+                                alt="ifconfig-1"
+                                class="alignnone size-full wp-image-100"
+                                data-attachment-id="100"
+                                data-comments-opened="1" data-image-caption=""
+                                data-image-description=""
+                                data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                                data-image-title="ifconfig-1"
+                                data-large-file="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=677"
+                                data-medium-file="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=300"
+                                data-orig-file="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png"
+                                data-orig-size="677,141"
+                                data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/ifconfig-1/"
+                                loading="lazy"
+                                sizes="(max-width: 677px) 100vw, 677px"
+                                src="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=700"
+                                srcset="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png 677w, https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=150&amp;h=31 150w, https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=300&amp;h=62 300w"/></span>
+                    </p>
+                    <h3><span><strong>iwconfig</strong></span></h3>
+                    <p><span>iwconfig is similar to ifconfig , but is dedicated to the wireless interfaces.</span>
+                    </p>
+                </div>
+                <div></div>
+                <div><span><img alt="iwconfig"
+                                class="alignnone size-full wp-image-101"
+                                data-attachment-id="101"
+                                data-comments-opened="1" data-image-caption=""
+                                data-image-description=""
+                                data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                                data-image-title="iwconfig"
+                                data-large-file="https://vppraveen.files.wordpress.com/2018/03/iwconfig.png?w=690"
+                                data-medium-file="https://vppraveen.files.wordpress.com/2018/03/iwconfig.png?w=300"
+                                data-orig-file="https://vppraveen.files.wordpress.com/2018/03/iwconfig.png"
+                                data-orig-size="690,220"
+                                data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/iwconfig/"
+                                loading="lazy"
+                                sizes="(max-width: 690px) 100vw, 690px"
+                                src="https://vppraveen.files.wordpress.com/2018/03/iwconfig.png?w=700"
+                                srcset="https://vppraveen.files.wordpress.com/2018/03/iwconfig.png 690w, https://vppraveen.files.wordpress.com/2018/03/iwconfig.png?w=150&amp;h=48 150w, https://vppraveen.files.wordpress.com/2018/03/iwconfig.png?w=300&amp;h=96 300w"/></span>
+                </div>
+                <h3></h3>
+                <h3><span><strong>ifup/</strong><strong>ifdown/ifquery</strong></span>
+                </h3>
+                <div><span>ifup &#8211; bring a network interface up.</span></div>
+                <div><span> ifdown &#8211; take a network interface down</span></div>
+                <div><span> ifquery &#8211; parse interface configuration</span></div>
+                <div></div>
+                <h4>usage examples</h4>
+                <div class="command">
+                    $ ifdown eth0
+                    <br>
+                    $ ifup eth0
+                    <br>
+                    $ ifquery eth0
+                </div>
+
+                <h3><span><strong>host</strong></span></h3>
+                <div><span>Performs a simple lookup of an internet address (using the Domain Name System, DNS).</span>
+                </div>
+                <div></div>
+                <div>
+                    <p><span><img alt="host"
+                                  class="alignnone size-full wp-image-98"
+                                  data-attachment-id="98"
+                                  data-comments-opened="1" data-image-caption=""
+                                  data-image-description=""
+                                  data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                                  data-image-title="host"
+                                  data-large-file="https://vppraveen.files.wordpress.com/2018/03/host.png?w=530"
+                                  data-medium-file="https://vppraveen.files.wordpress.com/2018/03/host.png?w=300"
+                                  data-orig-file="https://vppraveen.files.wordpress.com/2018/03/host.png"
+                                  data-orig-size="530,147"
+                                  data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/host/"
+                                  loading="lazy"
+                                  sizes="(max-width: 530px) 100vw, 530px"
+                                  src="https://vppraveen.files.wordpress.com/2018/03/host.png?w=700"
+                                  srcset="https://vppraveen.files.wordpress.com/2018/03/host.png 530w, https://vppraveen.files.wordpress.com/2018/03/host.png?w=150&amp;h=42 150w, https://vppraveen.files.wordpress.com/2018/03/host.png?w=300&amp;h=83 300w"/></span>
+                    </p>
+                    <h3><span><strong>dig</strong></span></h3>
+                    <p><span style="color:#000000;text-align:justify;">The &#8220;domain information groper&#8221; tool. More advanced then host. If you give a hostname as an argument to output information about that host, including it&#8217;s IP address, hostname and various other information.</span>
+                    </p>
+                </div>
+                <div>
+                    <p style="text-align:justify;"><span>To find the host name for a given IP address (ie a reverse lookup), use dig with the `-x&#8217; option. dig takes a huge number of options (at the point of being too many), refer to the manual page for more information.</span>
+                    </p>
+                    <p><span><del><img alt="dig-1"
+                                       class="alignnone size-full wp-image-97"
+                                       data-attachment-id="97"
+                                       data-comments-opened="1" data-image-caption=""
+                                       data-image-description=""
+                                       data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                                       data-image-title="dig-1"
+                                       data-large-file="https://vppraveen.files.wordpress.com/2018/03/dig-1.png?w=611"
+                                       data-medium-file="https://vppraveen.files.wordpress.com/2018/03/dig-1.png?w=300"
+                                       data-orig-file="https://vppraveen.files.wordpress.com/2018/03/dig-1.png"
+                                       data-orig-size="611,326"
+                                       data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/dig-1/"
+                                       loading="lazy"
+                                       sizes="(max-width: 611px) 100vw, 611px"
+                                       src="https://vppraveen.files.wordpress.com/2018/03/dig-1.png?w=700"
+                                       srcset="https://vppraveen.files.wordpress.com/2018/03/dig-1.png 611w, https://vppraveen.files.wordpress.com/2018/03/dig-1.png?w=150&amp;h=80 150w, https://vppraveen.files.wordpress.com/2018/03/dig-1.png?w=300&amp;h=160 300w"/></del></span>
+                    </p>
+                    <p><span><img alt="dig-2"
+                                  class="alignnone size-full wp-image-96"
+                                  data-attachment-id="96"
+                                  data-comments-opened="1" data-image-caption=""
+                                  data-image-description=""
+                                  data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                                  data-image-title="dig-2"
+                                  data-large-file="https://vppraveen.files.wordpress.com/2018/03/dig-2.png?w=629"
+                                  data-medium-file="https://vppraveen.files.wordpress.com/2018/03/dig-2.png?w=300"
+                                  data-orig-file="https://vppraveen.files.wordpress.com/2018/03/dig-2.png"
+                                  data-orig-size="629,288"
+                                  data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/dig-2/"
+                                  loading="lazy"
+                                  sizes="(max-width: 629px) 100vw, 629px"
+                                  src="https://vppraveen.files.wordpress.com/2018/03/dig-2.png?w=700"
+                                  srcset="https://vppraveen.files.wordpress.com/2018/03/dig-2.png 629w, https://vppraveen.files.wordpress.com/2018/03/dig-2.png?w=150&amp;h=69 150w, https://vppraveen.files.wordpress.com/2018/03/dig-2.png?w=300&amp;h=137 300w"/></span>
+                    </p>
+                    <h3><span><strong>whois</strong></span></h3>
+                    <p><span>whois is used to look up the contact information from the “whois” databases, the servers are only likely to hold major sites. </span>
+                    </p>
+                </div>
+                <h3><span><strong>wget</strong></span></h3>
+                <div style="text-align:justify;"><span>(GNU Web get) used to download files from the World Wide Web. To archive a single web-site, use the -m or &#8211;mirror (mirror) option. Use the -nc (no clobber) option to stop wget from overwriting a file if you already have it. Use the &#8216;-c&#8217; or&#8217; &#8211;continue&#8217; option to continue a file that was unfinished by wget or another program.</span>
+                </div>
+                <div>
+                    <p><span>Simple usage example:  </span><span>wget url_for_file</span><br/>
+                        <span>This would simply get a file from a site. </span></p>
+                    <p><span>wget has many more options refer to the examples section of the manual page, this tool is very well documented.</span>
+                    </p>
+                </div>
+                <div></div>
+                <div><img alt="Screenshot from 2018-03-10 13-56-46.png"
+                          class="alignnone size-full wp-image-116"
+                          data-attachment-id="116"
+                          data-comments-opened="1" data-image-caption=""
+                          data-image-description=""
+                          data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                          data-image-title="Screenshot from 2018-03-10 13-56-46"
+                          data-large-file="https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-56-46.png?w=672"
+                          data-medium-file="https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-56-46.png?w=300"
+                          data-orig-file="https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-56-46.png"
+                          data-orig-size="672,263"
+                          data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/screenshot-from-2018-03-10-13-56-46/"
+                          loading="lazy"
+                          sizes="(max-width: 672px) 100vw, 672px"
+                          src="https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-56-46.png?w=700"
+                          srcset="https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-56-46.png 672w, https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-56-46.png?w=150&amp;h=59 150w, https://vppraveen.files.wordpress.com/2018/03/screenshot-from-2018-03-10-13-56-46.png?w=300&amp;h=117 300w"/>
+                </div>
+                <h3><span><strong>curl</strong></span></h3>
+                <div><span style="color:#000000;text-align:justify;">curl is another remote downloader. This remote downloader is designed to work without user interaction and supports a variety of protocols, can upload/download and has a large number of tricks/work-arounds for various things. It can access dictionary servers (dict), ldap servers, ftp, http, gopher, see the manual page for full details.</span>
+                </div>
+                <div>
+                    <p style="text-align:justify;"><span>To access the full manual (which is huge) for this command type:</span>
+                    </p>
+                    <p><span>curl -M</span><br/>
+                        <span>For general usage you can use it like wget. You can also login using a user name by using the -u option and typing your username and password like this: </span>
+                    </p>
+                    <p><span>curl -u username:password <a
+                            href="http://www.placetodownload/file"
+                            rel="nofollow">http://www.placetodownload/file</a></span>
+                    </p>
+                </div>
+                <div><span><strong> </strong></span></div>
+                <h2><span><strong>Remote Login</strong></span></h2>
+                <h3><span><strong>ssh</strong></span></h3>
+                <p style="text-align:justify;"><span>ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine. It is intended to provide secure encrypted communications between two untrusted hosts over an insecure network. X11 connections, arbitrary TCP ports and UNIX-domain sockets can also be forwarded over the secure channel.</span>
+                </p>
+                <div><span><img alt="ssh"
+                                class="alignnone size-full wp-image-114"
+                                data-attachment-id="114"
+                                data-comments-opened="1" data-image-caption=""
+                                data-image-description=""
+                                data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                                data-image-title="ssh"
+                                data-large-file="https://vppraveen.files.wordpress.com/2018/03/ssh1.png?w=587"
+                                data-medium-file="https://vppraveen.files.wordpress.com/2018/03/ssh1.png?w=300"
+                                data-orig-file="https://vppraveen.files.wordpress.com/2018/03/ssh1.png"
+                                data-orig-size="587,436"
+                                data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/ssh-2/"
+                                loading="lazy"
+                                sizes="(max-width: 587px) 100vw, 587px"
+                                src="https://vppraveen.files.wordpress.com/2018/03/ssh1.png?w=700"
+                                srcset="https://vppraveen.files.wordpress.com/2018/03/ssh1.png 587w, https://vppraveen.files.wordpress.com/2018/03/ssh1.png?w=150&amp;h=111 150w, https://vppraveen.files.wordpress.com/2018/03/ssh1.png?w=300&amp;h=223 300w"/></span>
+                </div>
+                <h3 style="text-align:justify;"><span><strong>scp</strong></span></h3>
+                <div style="text-align:justify;"><span> scp copies files between hosts on a network. It uses ssh(1) for data transfer, and uses the same authentication and provides the same security as ssh(1). scp will ask for passwords or passphrases if they are needed for authentication.</span>
+                </div>
+                <div></div>
+                <div></div>
+                <div><span><img alt="scp"
+                                class="alignnone size-full wp-image-113"
+                                data-attachment-id="113"
+                                data-comments-opened="1" data-image-caption=""
+                                data-image-description=""
+                                data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                                data-image-title="scp"
+                                data-large-file="https://vppraveen.files.wordpress.com/2018/03/scp1.png?w=674"
+                                data-medium-file="https://vppraveen.files.wordpress.com/2018/03/scp1.png?w=300"
+                                data-orig-file="https://vppraveen.files.wordpress.com/2018/03/scp1.png"
+                                data-orig-size="674,92"
+                                data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/scp-2/"
+                                loading="lazy"
+                                sizes="(max-width: 674px) 100vw, 674px"
+                                src="https://vppraveen.files.wordpress.com/2018/03/scp1.png?w=700"
+                                srcset="https://vppraveen.files.wordpress.com/2018/03/scp1.png 674w, https://vppraveen.files.wordpress.com/2018/03/scp1.png?w=150&amp;h=20 150w, https://vppraveen.files.wordpress.com/2018/03/scp1.png?w=300&amp;h=41 300w"/></span>
+                </div>
+                <h3 style="text-align:justify;"><span><strong>sftp</strong></span></h3>
+                <div style="text-align:justify;"><span> sftp is an interactive file transfer program, similar to ftp(1), which performs all operations over an encrypted ssh(1) transport. It may also use many features of ssh, such as public key authentication and compression. sftp connects and logs into the specified host, then enters an interactive command mode.</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="grep-command"></div>
+        <div class="card" id="grep-command-body">
+            <h2>Grep Command</h2>
+            <h6>March 3, 2018</h6>
+            <p>Grep is a powerful tool which allow you to search a word through command line.In this post we
+                can see some grep command usage examples. Grep command is basically for searching a string
+                in a given file.</p>
+            <p>By default, <b>grep</b> prints the matching lines.</p>
+            <em><strong>Syntax</strong></em>
+            <div class="command">
+                $ grep [options] pattern [file ...]
+            </div>
+            </pre>
+            <p>Add &#8216;<em><strong>&#8211;color=auto</strong></em>&#8216; option to get colored output.
+            </p>
+            <p>Grep command options.</p>
+            <p><strong>Case-insensitive searching </strong></p>
+            <div class="command">$ grep -i 'string_to_search' file_name</div>
+            <p><strong>Searching with wild character</strong></p>
+            <div class="command">$ grep <em><strong>-i</strong> </em>'search key.*' file_name</div>
+            <p>the above command will list every line starting with search key what ever after this is not a
+                problem.</p>
+            <p>More combinations like</p>
+            <div class="command">$ grep 'search.*key' file_name
+                <br>
+                $ grep '.*search key' file_name
+            </div>
+            <p>are possible.</p>
+            <p><strong>Searching for exact string not as a sub strings</strong></p>
+            <div class="command">$ grep -<em><strong>w</strong> </em>'search key' file_name</div>
+            <p><strong>Searching recursively in a directory.</strong></p>
+            <div class="command">$ grep <em><strong>-r</strong></em> 'search key' <em>directory</em></div>
+            <p><strong>Invert mach finding</strong></p>
+            <div class="command">$ grep -v 'search key' file_name</div>
+            <p><strong>Multiple match finding</strong></p>
+            <div class="command">$ grep -<em><strong>e</strong></em> 'search key1' -<em><strong>e</strong></em> 'search
+                key2' file_name
+            </div>
+            <p><strong>Show only list of files that contains search key</strong></p>
+            <div class="command">$ grep -<em><strong>l</strong> </em>'search key' file_name</div>
+            <p><strong>Finding number of matches in file for &#8216;search key&#8217;</strong></p>
+            <div class="command">$ grep -<em><strong>c</strong></em> 'search key' file_name</div>
+            <p>add &#8216;w&#8217; option to find exact match.</p>
+            <div class="command">$ grep -wc &#8216;search key&#8217; file_name</div>
+            <p><strong>Get the line number with grep out put</strong></p>
+            <div class="command">$ grep <em><strong>-n</strong></em> 'search key' file_name</div>
+            <p><strong>Show lines after the match </strong></p>
+            <div class="command">$ grep <em><strong>-A</strong></em> &lt;N&gt; 'search key' file_name</div>
+            <p>the above command will show &#8216;<strong>N&#8217; </strong> lines after the match.</p>
+            <p><strong>Show lines before the match </strong></p>
+            <div class="command">$ grep -<em><strong>B</strong></em> &lt;<strong>N</strong>&gt; 'search key' file_name
+            </div>
+            <p>the above command will show &#8216;<strong>N&#8217; </strong> lines before the match.</p>
+            <p><strong>Show lines around the match </strong></p>
+            <div class="command">$ grep <em><strong>-C</strong></em> &lt;<strong>N</strong>&gt; 'search key' file_name
+            </div>
+            <p>the above command will show &#8216;<strong>N&#8217; </strong> lines around the match.</p>
+        </div>
+
+        <div id="basic-commands"></div>
+        <div id="basic-commands-body" class="card">
+            <h2>Basic Linux Commands</h2>
+            <h6>Feb 28, 2018</h6>
+            <p style="padding-left:30px;"><strong>ls </strong></p>
+            <p style="text-align:justify;">List the files in the directory. You can add &#8216;-a&#8217;
+                option to show all files including hidden files. Adding the directory path will list files
+                in the mentioned directory.</p>
+            <p>Some commonly used options for ls.</p>
+            <div class="command">
+                $ ls -l
+                <br>
+                $ ls -la
+                <br>
+                $ ls -lrt (reverse sort with the time of change in the files)
+                <br>
+                $ ls -lrth ('h' options to list files in print sizes in human-readable format)
+            </div>
+            <p><img alt="Screenshot from 2018-02-28 20:29:02"
+                    class="alignnone size-full wp-image-73"
+                    data-attachment-id="73"
+                    data-comments-opened="1" data-image-caption=""
+                    data-image-description=""
+                    data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                    data-image-title="Screenshot from 2018-02-28 20:29:02"
+                    data-large-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png?w=700"
+                    data-medium-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png?w=300"
+                    data-orig-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png"
+                    data-orig-size="870,440"
+                    data-permalink="https://vppraveen.wordpress.com/2018/02/28/basic-linux-commands/screenshot-from-2018-02-28-202902/"
+                    loading="lazy"
+                    sizes="(max-width: 870px) 100vw, 870px"
+                    src="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png?w=700"
+                    srcset="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png 870w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png?w=150&amp;h=76 150w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png?w=300&amp;h=152 300w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-202902.png?w=768&amp;h=388 768w"/>
+            </p>
+            <p><strong>cd</strong></p>
+            <p>Change directory, move to another directory. cd command without any directory name will
+                redirect to the home directory.</p>
+            <p><strong>pwd</strong></p>
+            <p>Print working directory.</p>
+            <p><img alt="Screenshot from 2018-02-28 20:42:46"
+                    class="alignnone size-full wp-image-75"
+                    data-attachment-id="75"
+                    data-comments-opened="1" data-image-caption=""
+                    data-image-description=""
+                    data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                    data-image-title="Screenshot from 2018-02-28 20:42:46"
+                    data-large-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png?w=521"
+                    data-medium-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png?w=300"
+                    data-orig-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png"
+                    data-orig-size="521,251"
+                    data-permalink="https://vppraveen.wordpress.com/2018/02/28/basic-linux-commands/screenshot-from-2018-02-28-204246/"
+                    loading="lazy"
+                    sizes="(max-width: 521px) 100vw, 521px"
+                    src="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png?w=700"
+                    srcset="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png 521w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png?w=150&amp;h=72 150w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-204246.png?w=300&amp;h=145 300w"/>
+            </p>
+            <p><strong>rm</strong></p>
+            <p>delete files and directories, directories need to add &#8216;-r&#8217; option, like rm -r
+                folder_name</p>
+            <p><strong>mkdir</strong></p>
+            <p>the command to create a directory.</p>
+            <p><strong>touch</strong></p>
+            <p>The <strong>touch</strong> command is used to create a file.</p>
+            <p><img alt="Screenshot from 2018-02-28 22:52:21"
+                    class="alignnone  wp-image-76"
+                    data-attachment-id="76"
+                    data-comments-opened="1" data-image-caption=""
+                    data-image-description=""
+                    data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                    data-image-title="Screenshot from 2018-02-28 22:52:21"
+                    data-large-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png?w=525"
+                    data-medium-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png?w=300"
+                    data-orig-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png"
+                    data-orig-size="525,381"
+                    data-permalink="https://vppraveen.wordpress.com/2018/02/28/basic-linux-commands/screenshot-from-2018-02-28-225221/"
+                    height="373"
+                    loading="lazy" sizes="(max-width: 514px) 100vw, 514px"
+                    src="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png?w=514&#038;h=373"
+                    srcset="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png?w=514&amp;h=373 514w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png?w=150&amp;h=109 150w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png?w=300&amp;h=218 300w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225221.png 525w"
+                    width="514"/></p>
+            <p><strong>cp</strong></p>
+            <p>cp command is used to copy a file or directory. To copy files from a directory recursively
+                need to add &#8216;-r&#8217; option. We need to specify the source and destination to the
+                command, like cp 1.txt 2.txt</p>
+            <p><img alt="Screenshot from 2018-02-28 22:59:18"
+                    class="alignnone size-full wp-image-77"
+                    data-attachment-id="77"
+                    data-comments-opened="1" data-image-caption=""
+                    data-image-description=""
+                    data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                    data-image-title="Screenshot from 2018-02-28 22:59:18"
+                    data-large-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png?w=480"
+                    data-medium-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png?w=300"
+                    data-orig-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png"
+                    data-orig-size="480,110"
+                    data-permalink="https://vppraveen.wordpress.com/2018/02/28/basic-linux-commands/screenshot-from-2018-02-28-225918/"
+                    loading="lazy"
+                    sizes="(max-width: 480px) 100vw, 480px"
+                    src="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png?w=700"
+                    srcset="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png 480w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png?w=150&amp;h=34 150w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-225918.png?w=300&amp;h=69 300w"/>
+            </p>
+            <p><strong>mv</strong></p>
+            <p>mv command is used to move files or directories through the command line. We can use the same
+                command to rename a file.</p>
+            <p><img alt="Screenshot from 2018-02-28 23:02:07"
+                    class="alignnone size-full wp-image-78"
+                    data-attachment-id="78"
+                    data-comments-opened="1" data-image-caption=""
+                    data-image-description=""
+                    data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                    data-image-title="Screenshot from 2018-02-28 23:02:07"
+                    data-large-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png?w=603"
+                    data-medium-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png?w=300"
+                    data-orig-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png"
+                    data-orig-size="603,214"
+                    data-permalink="https://vppraveen.wordpress.com/2018/02/28/basic-linux-commands/screenshot-from-2018-02-28-230207/"
+                    loading="lazy"
+                    sizes="(max-width: 603px) 100vw, 603px"
+                    src="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png?w=700"
+                    srcset="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png 603w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png?w=150&amp;h=53 150w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230207.png?w=300&amp;h=106 300w"/>
+            </p>
+            <p><strong>echo</strong></p>
+            <p>echo command simply returns whatever it is given to it, like an echo. It is helpful in some
+                data operations with the help of redirection operation.</p>
+            <p><strong>cat </strong></p>
+            <p>cat command is used to display contents of a file. It is very useful for small files.</p>
+            <p><img alt="Screenshot from 2018-02-28 23:07:49"
+                    class="alignnone size-full wp-image-79"
+                    data-attachment-id="79"
+                    data-comments-opened="1" data-image-caption=""
+                    data-image-description=""
+                    data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                    data-image-title="Screenshot from 2018-02-28 23:07:49"
+                    data-large-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png?w=607"
+                    data-medium-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png?w=300"
+                    data-orig-file="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png"
+                    data-orig-size="607,216"
+                    data-permalink="https://vppraveen.wordpress.com/2018/02/28/basic-linux-commands/screenshot-from-2018-02-28-230749/"
+                    loading="lazy"
+                    sizes="(max-width: 607px) 100vw, 607px"
+                    src="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png?w=700"
+                    srcset="https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png 607w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png?w=150&amp;h=53 150w, https://vppraveen.files.wordpress.com/2018/02/screenshot-from-2018-02-28-230749.png?w=300&amp;h=107 300w"/>
+            </p>
+            <p><strong>man &amp; &#8211;help</strong></p>
+            <p>To know more details about a command and how to use it, use the <strong>man</strong> command.
+                It shows the manual pages of the command. eg &#8216;man cp&#8217; will show the details of
+                the cp command.</p>
+            <p>Passing the help argument to a command will give similar information.</p>
+            <div class="command">
+                <p>$ man cp</p>
+                <p>$ cp -help</p>
+            </div>
+        </div>
+
+        <div id="compile-linux"></div>
+        <div class="card" id="compile-linux-body">
+            <h2>Compiling Linux Kernel from Source code</h2>
+            <h6>November 12, 2014</h6>
+
+            <p><strong>C</strong>ompiling Linux kernel source code, it will be a nice thing to compile a
+                Linux kernel source code to build your own custom kernel.</p>
+            <p>It can be done in very few steps as described below.</p>
+            <hr/>
+            <p><strong>Step 1:</strong></p>
+            <p>Download the latest stable kernel from here:<a href="//www.kernel.org/"> <em><strong>https://www.kernel.org/</strong></em></a>
+            </p>
+            <p>Make sure you have downloaded the complete kernel not any patch. Or in terminal you can
+                download it by typing</p>
+            <p><em><strong>wget <a href="https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.16.7.tar.xz"
+                                   rel="nofollow">https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.16.7.tar.xz</a></strong></em>
+            </p>
+            <p><strong>Step 2:</strong></p>
+            <p><em><strong> Extract</strong></em> the compressed file.</p>
+            <p><em><strong>tar xf linux-3.16.7.tar.xz</strong></em></p>
+            <p>Go to directory linux-3-16.7.</p>
+            <p><em><strong> cd linux-3.16.7</strong></em></p>
+            <p><strong>Step 3: Install ncurses library </strong></p>
+            <div class="command">$ sudo apt-get install libncurses5-dev</div>
+            <p>This helps to configure your kernel in command line menu based interface.</p>
+            <p><strong>Step 4: Build the kernel configuration file</strong></p>
+            <p>There are three ways to build a Linux kernel.</p>
+            <p>1. make oldconfig</p>
+            <p>2. make menuconfig</p>
+            <p>3. make qconfig/gconfig/xconfig</p>
+            <p style="text-align:left;"> We use make menuconfig</p>
+            <p>now run <em><strong>make menuconfig</strong></em> command.</p>
+            <p>In the open window you can configure the options for file system, network, input output
+                devices, and so on ...</p>
+            <p>You may not know what to select, google it, and find out what they are, in every possible
+                way. And save the configuration file and rename it as &#8220;.config&#8221;. Or You can copy
+                the current kernel configuration to present working directory, and load it in the menu and
+                edit if you need, save it and rename as &#8220;.config&#8221;.</p>
+            <p><strong>Step 5: Compile the kernel</strong></p>
+            <p>Run <em><strong>make</strong> </em>command and wait</p>
+            <p style="text-align:left;">
+                For compiling<em><strong> kernel modules</strong></em> run <em><strong>make modules</strong></em>
+                command.</p>
+            <p>It will take much time depending upon your system. After that you can test your kernel using
+                qemu.</p>
+            <p>In terminal : <strong>qemu-system-x86_64 -kernel </strong><em><strong>directory</strong></em><strong>/linux-3.16.3/arch/x86_64/boot/bzImage</strong>
+            </p>
+            <p>If every thing is in order you can see the kernel booting in qemu and our kernel doesn't
+                have an initial file system, you can see kernel panic message.</p>
+            <p>it is advisable to change to your <em><strong>directory</strong><strong>.</strong></em> That&#8217;s
+                all and be patient while compiling kernel, it will take a while!!</p>
+        </div>
+    </div>
+
+<!--&lt;!&ndash; First Grid &ndash;&gt;-->
+<!--<div class="w3-row-padding w3-padding-64 w3-container">-->
+<!--    <div class="w3-content">-->
+<!--        <div class="w3-twothird">-->
+<!--            <h1>Lorem Ipsum</h1>-->
+<!--            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>-->
+
+<!--            <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint-->
+<!--                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco-->
+<!--                laboris nisi ut aliquip ex ea commodo consequat.</p>-->
+<!--        </div>-->
+
+<!--        <div class="w3-third w3-center">-->
+<!--            <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Second Grid &ndash;&gt;-->
+<!--<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">-->
+<!--    <div class="w3-content">-->
+<!--        <div class="w3-third w3-center">-->
+<!--            <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+<!--        </div>-->
+
+<!--        <div class="w3-twothird">-->
+<!--            <h1>Lorem Ipsum</h1>-->
+<!--            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>-->
+
+<!--            <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint-->
+<!--                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco-->
+<!--                laboris nisi ut aliquip ex ea commodo consequat.</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">-->
+<!--    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Footer &ndash;&gt;-->
+<!--<footer class="w3-container w3-padding-64 w3-center w3-opacity">-->
+<!--    <div class="w3-xlarge w3-padding-32">-->
+<!--        <i class="fa fa-facebook-official w3-hover-opacity"></i>-->
+<!--        <i class="fa fa-instagram w3-hover-opacity"></i>-->
+<!--        <i class="fa fa-snapchat w3-hover-opacity"></i>-->
+<!--        <i class="fa fa-pinterest-p w3-hover-opacity"></i>-->
+<!--        <i class="fa fa-twitter w3-hover-opacity"></i>-->
+<!--        <i class="fa fa-linkedin w3-hover-opacity"></i>-->
+<!--    </div>-->
+<!--    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>-->
+<!--</footer>-->
+
+<script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+
+</script>
+</body>
+</html>
