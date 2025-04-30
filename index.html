@@ -1,6 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>praveenvp.in</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css" media="all"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -8,217 +15,67 @@
           rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+        .w3-bar,button {font-family: "Montserrat", sans-serif}
+        .fa-anchor,.fa-coffee {font-size:200px}
 
-        /* Add a gray background color with some padding */
-        body {
-            padding: 20px;
-            /*background: #8CA196;*/
-            background-image: linear-gradient(to right, #577267, #8ca196);
-            color: #000 !important;
-            font-family: "Noto Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            font-variation-settings: "wdth" 100;
-        }
-
-        /* Header/Blog Title */
         .header {
-            padding: 20px;
-            font-size: 25px;
-            text-align: left;
-            color: #e2d0bd;
-            background: transparent;
-            font-family: "Audiowide", sans-serif;
-            /*text-shadow: 3px 3px 3px #8CA196;*/
-        }
-
-        /* Create two unequal columns that floats next to each other */
-        /* Left column */
-        .leftcolumn {
-            float: left;
-            width: 75%;
-        }
-
-        /* Right column */
-        .rightcolumn {
-            float: left;
-            width: 25%;
-            padding-left: 20px;
-        }
-
-        /* Fake image */
-        .fakeimg {
-            background-color: #aaa;
-            width: 100%;
-            padding: 10px;
-            margin: 5px;
-            color: #ddd !important;
-        }
-
-        a {
-            color: #adc0c9 !important;
-        }
-
-        /* Add a card effect for articles */
-        .card {
-            background-color: #8CA196;
-            padding: 20px;
-            margin-top: 20px;
-            font-weight: 500;
-            color: #1D1D35;
-            line-height: 1.6;
-            font-size: 16px;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Footer */
-        .footer {
-            padding: 10px;
+            padding: 30px;
+            font-size: 40px;
             text-align: center;
-            background: transparent;
-            margin-top: 20px;
-            color: #e2d0bd;
+            font-family: "Audiowide", sans-serif !important;
+            text-shadow: 5px 5px 5px #ababab;
         }
 
-        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 800px) {
-            .leftcolumn, .rightcolumn {
-                width: 100%;
-                padding: 0;
-            }
-        }
-
-        /*Hex Codes: #577267 #8CA196 #C1B1A0*/
-
-
-        .scrollable-div {
-            height: 200px;
-            overflow-x: scroll;
-            background: #abb8c3;
-            color: #56423C;
-            padding: 20px;
-            /*color: #FFC0B7;*/
-        }
-
-        .command {
-            /*overflow-x: scroll;*/
-            background: #374B43;
-            color: #C1DFD2;
-            padding: 20px;
-            font-weight: 500;
-            font-size: 14px;
-            width: 70%;
-            font-family: "Source Code Pro";
-            /*color: #FFC0B7;*/
-        }
-
-        textarea {
-            overflow-x: scroll;
-            color: #32373c;
-            background: #abb8c3;
-            line-height: 1.3;
-        }
-
-        h6, h5, h4, h3 {
-            color: #374B43;;
-        }
-
-        h6 {
-            color: #4d522c;
-            font-style: italic;
-            font-weight: 400;
-        }
-
-        h3 {
-            color: #0d435a;
-        }
-
-        b {
-            /*color: #E6EFFF;*/
-        }
-
-        .collapsible {
-            background-color: #25655c;
-            cursor: pointer;
-            padding: 18px;
-            width: 70%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 18px;
-            color: #FFFFFF;
-            font-weight: 500;
-            border-bottom: #C1DFD2 solid 1px;
-        }
-
-        .collapsible:hover {
-            background-color: #25655c;
-        }
-
-        .collapsible:after {
-            content: '\002B';
-            color: #C1DFD2;
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
-        }
-
-        .active:after {
-            content: "\2212";
-        }
-
-        .content {
-            padding: 0 18px;
-            display: none;
-            overflow: hidden;
-            background-color: transparent;
+        .main-color {
+            background-color: #DDA853;
         }
 
     </style>
 </head>
 <body>
-<div class="header">
-    <h2>praveenvp.in</h2>
-    <aside></aside>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar main-color w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large main-color" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">praveenvp.in</a>
+        <a href="#docker-compose" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Docker Compose</a>
+        <a href="#docker" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Docker</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="nav-dropdown">Linux Commands    <i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                <a href="#ngrep-command" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">nGrep</a>
+                <a href="#grep-command" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Grep</a>
+                <a href="#linux-networking-commands" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Networking Commands</a>
+                <a href="#basic-commands" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Basic Linux commands</a>
+                <a href="#compile-linux" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Compile Linux</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#docker-compose" class="w3-bar-item w3-button w3-padding-large">Docker Compose</a>
+        <a href="#docker" class="w3-bar-item w3-button w3-padding-large">Docker</a>
+        <a href="#ngrep-command" class="w3-bar-item w3-button w3-padding-large">nGrep</a>
+        <a href="#grep-command" class="w3-bar-item w3-button w3-padding-large">Grep</a>
+        <a href="#linux-networking-commands" class="w3-bar-item w3-button w3-padding-large">Networking Commands</a>
+        <a href="#basic-commands" class="w3-bar-item w3-button w3-padding-large">Basic Linux commands</a>
+        <a href="#compile-linux" class="w3-bar-item w3-button w3-padding-large">Compile Linux</a>
+    </div>
 </div>
 
+<!-- Header -->
+<!--<header class="w3-container main-color w3-center" style="padding:128px 16px;">-->
+<!--    <h1 class="w3-margin w3-jumbo header">praveenvp.in</h1>-->
+<!--    <p class="w3-xlarge"></p>-->
+<!--    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
 <div class="row">
     <div class="leftcolumn">
-        <!--        <section id="k8s">-->
-        <!--            <div class="card">-->
-        <!--                <h2>Kubernetes with Minikube</h2>-->
-        <!--                <h5>March 10, 2018</h5>-->
-        <!--                <p>Some text..</p>-->
-        <!--                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do-->
-        <!--                    eiusmod-->
-        <!--                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud-->
-        <!--                    exercitation-->
-        <!--                    ullamco.</p>-->
-        <!--            </div>-->
-        <!--        </section>-->
-
-        <!--        <div class="card">-->
-        <!--            <h2>Docker Swarm</h2>-->
-        <!--            <h5>March 10, 2018</h5>-->
-        <!--            <p>Some text..</p>-->
-        <!--            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do-->
-        <!--                eiusmod-->
-        <!--                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud-->
-        <!--                exercitation-->
-        <!--                ullamco.</p>-->
-        <!--        </div>-->
-
-        <div class="card" id="docker-compose">
+        <div id="docker-compose"></div>
+        <div class="card" id="docker-compose-body">
             <h2>Docker Compose</h2>
             <p><i><b>Docker Compose</b></i>
                 is a powerful tool for managing multi-container applications. It simplifies the process of defining,
@@ -235,7 +92,7 @@
 
             <button type="button" class="collapsible">Docker Compose key Commands</button>
             <div class="content">
-                <h3><b>To start all the services defined in your compose.yaml file</b></h3>
+                <h3>To start all the services defined in your compose.yaml file</h3>
                 <p></p>
                 <div class="command">
                     # docker compose up
@@ -387,8 +244,8 @@
 
         </div>
 
-
-        <div class="card" id="docker">
+        <div id="docker"></div>
+        <div class="card" id="docker-body">
             <h2>Docker</h2>
             <!--            <h6>Aug 16, 2020</h6>-->
             <p>
@@ -397,26 +254,26 @@
                 called a container. This container can then be run consistently across different environments, such as
                 development, testing, and production.
             </p>
-            <!--            <p>-->
-            <!--                Key benefits of using Docker:-->
-            <!--            </p>-->
-            <!--            <p>-->
-            <!--                <b>Portability:</b> Containers can be easily moved between different machines or environments without-->
-            <!--                changes to the application.-->
-            <!--            </p>-->
-            <!--            <p>-->
-            <!--                <b>Isolation:</b> Each container runs in its own isolated environment, preventing conflicts between-->
-            <!--                different applications.-->
-            <!--            </p>-->
-            <!--            <p>-->
-            <!--                <b>Efficiency:</b> Docker containers are lightweight and share the host operating system's kernel,-->
-            <!--                making them more efficient than traditional virtual machines. Scalability: Docker can be used to easily-->
-            <!--                scale applications up or down based on demand.-->
-            <!--            </p>-->
+                        <p>
+                            Key benefits of using Docker:
+                        </p>
+                        <p>
+                            <b>Portability:</b> Containers can be easily moved between different machines or environments without
+                            changes to the application.
+                        </p>
+                        <p>
+                            <b>Isolation:</b> Each container runs in its own isolated environment, preventing conflicts between
+                            different applications.
+                        </p>
+                        <p>
+                            <b>Efficiency:</b> Docker containers are lightweight and share the host operating system's kernel,
+                            making them more efficient than traditional virtual machines. Scalability: Docker can be used to easily
+                            scale applications up or down based on demand.
+                        </p>
 
             <div>
                 <p>See below to see the full list of docker commands <br>
-                    <a style="color: #ddd !important;" href="https://docs.docker.com/reference/cli/docker/">Docker CLI
+                    <a style="color: #31302e !important;" href="https://docs.docker.com/reference/cli/docker/">Docker CLI
                         reference</a>
                 </p>
             </div>
@@ -425,7 +282,7 @@
 
             <button type="button" class="collapsible">Image Management</button>
             <div class="content">
-                <h3><b>Image Management</b></h3>
+<!--                <h3><b>Image Management</b></h3>-->
                 <p><i><b>Pulls 'hello-world' from a Docker registry (e.g., Docker Hub).</b></i></p>
                 <div class="command">
                     # docker pull hello-world
@@ -450,7 +307,7 @@
 
             <button type="button" class="collapsible">Container Management</button>
             <div class="content">
-                <h3><b>Container Management</b></h3>
+<!--                <h3><b>Container Management</b></h3>-->
                 <p><i><b>Creates and starts a container from an image.</b></i></p>
                 <div class="command">
                     # docker run &lt;image name&gt;
@@ -485,7 +342,7 @@
 
             <button type="button" class="collapsible">Network Management</button>
             <div class="content">
-                <h3><b>Network Management</b></h3>
+<!--                <h3><b>Network Management</b></h3>-->
                 <p><i><b>Creates a new network.</b></i></p>
                 <div class="command">
                     # docker network create &lt;network_name&gt;
@@ -505,7 +362,7 @@
 
             <button type="button" class="collapsible">Volume Management</button>
             <div class="content">
-                <h3><b>Volume Management</b></h3>
+<!--                <h3><b>Volume Management</b></h3>-->
                 <p><i><b>Creates a new Volume.</b></i></p>
                 <div class="command">
                     # docker volume create &lt;volume_name&gt;
@@ -525,7 +382,7 @@
 
             <button type="button" class="collapsible">Other useful commands</button>
             <div class="content">
-                <h3><b>Other useful commands</b></h3>
+<!--                <h3><b>Other useful commands</b></h3>-->
                 <p><i><b>Displays detailed information about a container.</b></i></p>
                 <div class="command">
                     # docker inspect &lt;container_id&gt;
@@ -598,7 +455,8 @@
             </div>
         </div>
 
-        <div id="ngrep-command" class="card">
+        <div id="ngrep-command"></div>
+        <div id="ngrep-command-body" class="card">
             <h2>ngrep command</h2>
             <h6>MARCH 20, 2018</h6>
             <p><b>Network grep or 'ngrep'</b>, is a tool which performs most of GNU grep's common
@@ -743,7 +601,8 @@
 </pre>
             </div>
         </div>
-        <div id="linux-networking-commands" class="card">
+        <div id="linux-networking-commands"></div>
+        <div id="linux-networking-commands-body" class="card">
             <h2>Linux Networking Commands</h2>
             <h6>March 10, 2018</h6>
             <div class="entry-content">
@@ -835,40 +694,40 @@
                 </div>
                 <p><span>
                     <img alt="tcpdump-1"
-                              class="alignnone size-full wp-image-107"
-                              data-attachment-id="107"
-                              data-comments-opened="1" data-image-caption=""
-                              data-image-description=""
-                              data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
-                              data-image-title="tcpdump-1"
-                              data-large-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=681"
-                              data-medium-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=300"
-                              data-orig-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png"
-                              data-orig-size="681,198"
-                              data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/tcpdump-1-2/"
-                              loading="lazy"
-                              sizes="(max-width: 681px) 100vw, 681px"
-                              src="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=700"
+                         class="alignnone size-full wp-image-107"
+                         data-attachment-id="107"
+                         data-comments-opened="1" data-image-caption=""
+                         data-image-description=""
+                         data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                         data-image-title="tcpdump-1"
+                         data-large-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=681"
+                         data-medium-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=300"
+                         data-orig-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png"
+                         data-orig-size="681,198"
+                         data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/tcpdump-1-2/"
+                         loading="lazy"
+                         sizes="(max-width: 681px) 100vw, 681px"
+                         src="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=700"
                          srcset="https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png 681w,
                                https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=150&amp;h=44 150w,
                                https://vppraveen.files.wordpress.com/2018/03/tcpdump-11.png?w=300&amp;h=87 300w"/>
                     <p></p>
                     <img
-                        alt="tcpdump-2"
-                        class="alignnone size-full wp-image-106"
-                        data-attachment-id="106"
-                        data-comments-opened="1" data-image-caption=""
-                        data-image-description=""
-                        data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
-                        data-image-title="tcpdump-2"
-                        data-large-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=700"
-                        data-medium-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=300"
-                        data-orig-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png"
-                        data-orig-size="727,444"
-                        data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/tcpdump-2-2/"
-                        loading="lazy" sizes="(max-width: 727px) 100vw, 727px"
-                        src="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=700"
-                        srcset="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png 727w, https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=150&amp;h=92 150w, https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=300&amp;h=183 300w"/></span>
+                            alt="tcpdump-2"
+                            class="alignnone size-full wp-image-106"
+                            data-attachment-id="106"
+                            data-comments-opened="1" data-image-caption=""
+                            data-image-description=""
+                            data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                            data-image-title="tcpdump-2"
+                            data-large-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=700"
+                            data-medium-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=300"
+                            data-orig-file="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png"
+                            data-orig-size="727,444"
+                            data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/tcpdump-2-2/"
+                            loading="lazy" sizes="(max-width: 727px) 100vw, 727px"
+                            src="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=700"
+                            srcset="https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png 727w, https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=150&amp;h=92 150w, https://vppraveen.files.wordpress.com/2018/03/tcpdump-21.png?w=300&amp;h=183 300w"/></span>
                 </p>
                 <h3><span><strong>hostname</strong></span></h3>
                 <p style="text-align:justify;">
@@ -970,22 +829,22 @@
                                     https://vppraveen.files.wordpress.com/2018/03/ifconfig.png?w=300&amp;h=128 300w"/>
                         <p></p>
                         <img
-                            alt="ifconfig-1"
-                            class="alignnone size-full wp-image-100"
-                            data-attachment-id="100"
-                            data-comments-opened="1" data-image-caption=""
-                            data-image-description=""
-                            data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
-                            data-image-title="ifconfig-1"
-                            data-large-file="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=677"
-                            data-medium-file="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=300"
-                            data-orig-file="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png"
-                            data-orig-size="677,141"
-                            data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/ifconfig-1/"
-                            loading="lazy"
-                            sizes="(max-width: 677px) 100vw, 677px"
-                            src="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=700"
-                            srcset="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png 677w, https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=150&amp;h=31 150w, https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=300&amp;h=62 300w"/></span>
+                                alt="ifconfig-1"
+                                class="alignnone size-full wp-image-100"
+                                data-attachment-id="100"
+                                data-comments-opened="1" data-image-caption=""
+                                data-image-description=""
+                                data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
+                                data-image-title="ifconfig-1"
+                                data-large-file="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=677"
+                                data-medium-file="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=300"
+                                data-orig-file="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png"
+                                data-orig-size="677,141"
+                                data-permalink="https://vppraveen.wordpress.com/2018/03/10/linux-networking-commands/ifconfig-1/"
+                                loading="lazy"
+                                sizes="(max-width: 677px) 100vw, 677px"
+                                src="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=700"
+                                srcset="https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png 677w, https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=150&amp;h=31 150w, https://vppraveen.files.wordpress.com/2018/03/ifconfig-1.png?w=300&amp;h=62 300w"/></span>
                     </p>
                     <h3><span><strong>iwconfig</strong></span></h3>
                     <p><span>iwconfig is similar to ifconfig , but is dedicated to the wireless interfaces.</span>
@@ -1183,7 +1042,8 @@
             </div>
         </div>
 
-        <div class="card" id="grep-command">
+        <div id="grep-command"></div>
+        <div class="card" id="grep-command-body">
             <h2>Grep Command</h2>
             <h6>March 3, 2018</h6>
             <p>Grep is a powerful tool which allow you to search a word through command line.In this post we
@@ -1241,7 +1101,8 @@
             <p>the above command will show &#8216;<strong>N&#8217; </strong> lines around the match.</p>
         </div>
 
-        <div id="basic-commands" class="card">
+        <div id="basic-commands"></div>
+        <div id="basic-commands-body" class="card">
             <h2>Basic Linux Commands</h2>
             <h6>Feb 28, 2018</h6>
             <p style="padding-left:30px;"><strong>ls </strong></p>
@@ -1395,7 +1256,8 @@
             </div>
         </div>
 
-        <div class="card" id="compile-linux">
+        <div id="compile-linux"></div>
+        <div class="card" id="compile-linux-body">
             <h2>Compiling Linux Kernel from Source code</h2>
             <h6>November 12, 2014</h6>
 
@@ -1447,64 +1309,75 @@
                 all and be patient while compiling kernel, it will take a while!!</p>
         </div>
     </div>
-    <div class="rightcolumn">
-        <!--        <div class="card">-->
-        <!--            <h2>About Me</h2>-->
-        <!--            <div class="fakeimg" style="height:100px;">Image</div>-->
-        <!--            <h5>"Navigating the Digital Landscape: A Decade of Java Enterprise Development"</h5>-->
-        <!--            <p>-->
-        <!--                Welcome to my blog! As a seasoned software professional with over a decade of experience in Java-->
-        <!--                enterprise application development, I'm passionate about sharing insights and knowledge gained from-->
-        <!--                my-->
-        <!--                journey in the dynamic world of technology.</p>-->
-        <!--            <p>-->
-        <!--                Throughout my career, I've had the opportunity to work on a variety of projects, leveraging-->
-        <!--                technologies-->
-        <!--                such as Java, JEE, Docker, Docker Swarm, Kubernetes, and related cloud platforms. My expertise lies-->
-        <!--                in-->
-        <!--                designing, developing, and deploying scalable and robust enterprise applications.-->
-        <!--            </p>-->
-        <!--        </div>-->
-        <div class="card">
-            <h3>Popular Posts</h3>
-            <div class="command" style="width: 99%">
-                <!--                <a href="#k8s">Kubernetes</a>-->
-                <!--                <br>-->
-                <!--                <a href="#docker-swarm">Docker Swarm</a>-->
-                <!--                <br>-->
-                <a href="#docker-compose">Docker Compose</a>
-                <br>
-                <a href="#docker">Docker</a>
-                <br>
-                <a href="#ngrep-command">ngrep</a>
-                <br>
-                <a href="#linux-networking-commands">Networking Commands</a>
-                <br>
-                <a href="#grep-command">Grep</a>
-                <br>
-                <a href="#basic-commands">Basic Commands</a>
-                <br>
-                <a href="#compile-linux">Compile Linux Source code</a>
-                <br>
-            </div>
-        </div>
-        <!--        <div class="card">-->
-        <!--            <h5>Follow Me</h5>-->
-        <!--            <p>Some text..</p>-->
-        <!--        </div>-->
-    </div>
-</div>
 
-<div class="footer">
-    <h5>praveen vp, praveen_v.p@outlook.com</h5>
-</div>
+<!--&lt;!&ndash; First Grid &ndash;&gt;-->
+<!--<div class="w3-row-padding w3-padding-64 w3-container">-->
+<!--    <div class="w3-content">-->
+<!--        <div class="w3-twothird">-->
+<!--            <h1>Lorem Ipsum</h1>-->
+<!--            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>-->
 
+<!--            <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint-->
+<!--                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco-->
+<!--                laboris nisi ut aliquip ex ea commodo consequat.</p>-->
+<!--        </div>-->
+
+<!--        <div class="w3-third w3-center">-->
+<!--            <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Second Grid &ndash;&gt;-->
+<!--<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">-->
+<!--    <div class="w3-content">-->
+<!--        <div class="w3-third w3-center">-->
+<!--            <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+<!--        </div>-->
+
+<!--        <div class="w3-twothird">-->
+<!--            <h1>Lorem Ipsum</h1>-->
+<!--            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>-->
+
+<!--            <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint-->
+<!--                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco-->
+<!--                laboris nisi ut aliquip ex ea commodo consequat.</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">-->
+<!--    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Footer &ndash;&gt;-->
+<!--<footer class="w3-container w3-padding-64 w3-center w3-opacity">-->
+<!--    <div class="w3-xlarge w3-padding-32">-->
+<!--        <i class="fa fa-facebook-official w3-hover-opacity"></i>-->
+<!--        <i class="fa fa-instagram w3-hover-opacity"></i>-->
+<!--        <i class="fa fa-snapchat w3-hover-opacity"></i>-->
+<!--        <i class="fa fa-pinterest-p w3-hover-opacity"></i>-->
+<!--        <i class="fa fa-twitter w3-hover-opacity"></i>-->
+<!--        <i class="fa fa-linkedin w3-hover-opacity"></i>-->
+<!--    </div>-->
+<!--    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>-->
+<!--</footer>-->
 
 <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
 
-    for (i = 0; i < coll.length; i++) {
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
@@ -1515,7 +1388,7 @@
             }
         });
     }
-</script>
 
+</script>
 </body>
 </html>
