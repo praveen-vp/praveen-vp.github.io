@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>praveenvp.in</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css" media="all"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .w3-bar, button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .main-color {
+            background-color: #DDA853;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar main-color w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large main-color"
+           href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                class="fa fa-bars"></i></a>
+        <a href="index.html#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="nav-dropdown">System Designs <i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                <a href="#data-collection-id" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Data Collection pipeline for Globally Distributed Machines</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Header -->
+<!--<header class="w3-container main-color w3-center" style="padding:128px 16px;">-->
+<!--    <h1 class="w3-margin w3-jumbo header">praveenvp.in</h1>-->
+<!--    <p class="w3-xlarge"></p>-->
+<!--    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>-->
+</header>
+<div class="row">
+    <div class="leftcolumn">
+        <div id="data-collection-id"></div>
+        <div class="card" id="data-collection-body">
+            <!--            <h2>Collecting Financial Data from VLT Machines Distributed all over the World</h2>-->
+            <h2>Architecting a Scalable Financial Pipeline for 30,000 VLT Machines Distributed all over the World</h2>
+            <h3>Context</h3>
+            <p>
+                Globally, a gaming company operates 30,000 VLT machines. The financial transaction data they produce
+                needs it to be transmitted to the company's Enterprise Data Warehouse (EDW) in the UK, assuming a
+                network
+                connection exists for this purpose.
+            </p>
+            <p>One machine will generate two financial transactions in 3 seconds. </p>
+            <h3>Question</h3>
+            <p>
+                As an architect, how would you design a scalable, high performance solution to collect, process and
+                store financial data from 30,000 VLT machines into the EDW.
+            </p>
+
+            <h3>Key Considerations</h3>
+            <ul>
+                <li>Efficient data collection from a large distributed estate.</li>
+                <li>Ensuring scalability as the number of terminals increases.</li>
+                <li>Reducing the network bandwidth usage and improving the performance.</li>
+                <li>Ensuring the data integrity.</li>
+                <li>Handling real-time or near-real-time processing requirements.</li>
+                <li>Transforming data to fit the schema of the EDW.</li>
+                <li>Ensuring fault tolerance and observability.</li>
+            </ul>
+
+            <div class="card">
+                <picture>
+                    <source media="(min-width: 650px)" srcset="data-capture.png">
+                    <source media="(min-width: 450px)" srcset="data-capture.png">
+                    <img src="data-capture.png" width="1275" height="947" alt="data capturing diagram">
+                </picture>
+            </div>
+
+            <button type="button" class="collapsible">Design Considerations</button>
+            <div class="content">
+                <p>As our terminals are distributed all over the world, and assumes the distribution is as follows, for
+                    the
+                    provided 30K VLT machines.</p>
+                <ul>
+                    <li>Europe: 10K</li>
+                    <li>North America: 10K</li>
+                    <li>Latin America: 3K</li>
+                    <li>Africa: 2K</li>
+                    <li>Asia: 5K</li>
+                </ul>
+                <p>From one VLT machine, we are expecting <b>two</b> data in <b>3 seconds</b>, assumes the machine is
+                    functioning non-stop,
+                    we will be having 20 intervals of 3 seconds in 60 seconds, that means it will be getting 40
+                    financial
+                    data in one minute.The maximum load we will be getting at peak hours will be as follows.</p>
+                <div class="command">
+                    <li>40 x 30000 = 1,200,000 transactions per minute</li>
+                    <li>1,200,000/60 = 20,000 request per seconds from all over the world, if the provided 30K machines
+                        are
+                        functioning.
+                    </li>
+                </div>
+                <p>Since these are distributed all over the world, and not all the VLT machines are functioning,
+                    assuming
+                    half of the population is sleeping and our peak load will be reduced to
+                    10K requests per second.</p>
+
+                <p>To reduce the network bandwidth, we can transfer the data in a timed intervals, like say for
+                    simplicity,
+                    I take the interval as 30 seconds.</p>
+                <p>From 30K VLT machines there will be 60K requests per minute, taking the geo-distributions again, the
+                    maximum peak load will be 30K requests per minute.</p>
+                <div class="command">
+                    <li>30K Requests Per Minutes</li>
+                    <li>30,000/60 = 500 Requests per second, which is still a considerable amount of traffic.</li>
+                </div>
+            </div>
+            <p></p>
+
+            <button type="button" class="collapsible">Financial Data Structure</button>
+
+            <div class="content">
+                <p>Financial data being transmitted consists of VLT-Machine-ID, stake amount, win amount, timestamp. No
+                    keys are transmitted, only values in a specific order to reduce the bandwidth usage.
+                    Define post-method with data as follows.</p>
+                <p></p>
+                <h4>for one transaction: </h4>
+                <div class="command">
+                    <li>VLT-Id|stakeAmount|winAmount|timeStamp(epoch time)|sha1Sum(VLT-id, stake amount, win amount, and
+                        timestamp)
+                    </li>
+                </div>
+                <p>* The hash is used to verify the request data, being transmitted over the network.</p>
+
+                <h4>When sending in batches of one minutes, we can avoid the hash value calculation per transaction, to
+                    hash value to the full packet.
+                </h4>
+                <div class="command">
+                    sha1Sum(data)#VLT-Id|stakeAmount|winAmount|timeStamp(epoch
+                    time)#VLT-Id|stakeAmount|winAmount|timeStamp(epoch
+                    time)#VLT-Id|stakeAmount|winAmount|timeStamp(epoch
+                    time) ....
+                </div>
+                <h5>Details of the data being transmitted.</h5>
+                <li>VLT-ID : 6 Digits.</li>
+                <li>Stake Amount: 5 Digits.</li>
+                <li>Win amount: 7 Digits.</li>
+                <li>Epoch time: 10 Digits.</li>
+                <li>Hash: 40 chars.</li>
+                <li>For One transaction: 6 + 5 + 7 + 10 + 3 (separating chars) + 1 (# for separating the one
+                    transaction
+                    data) = 32 Chars per transaction.
+                </li>
+                <li>For One minutes 40 transactions => 40(sha1sum size) + (32 x 40 ) = 1320 Bytes of data per
+                    request.
+                </li>
+                <li>in 30 seconds we have 20 transactions => 40(sha1Sum size) + (32 x 20 ) = 660 Bytes of data per
+                    request.
+                </li>
+                <p>* This data is tiny even in the high latency network this will take little time, Even in slow mobile
+                    network this transmission happens instantly.</p>
+            </div>
+            <p></p>
+
+            <button type="button" class="collapsible">Deployment Plan</button>
+            <div class="content">
+                <p></p>
+                <h5>Minimize latency via Regional Data Collectors:</h5>
+                <li>Deploy data collection services in multiple
+                    regions, strategically located near VLT machines, to significantly reduce data transmission
+                    latency. The subregions will be added when Identifies the more data is being pushed to our
+                    system.
+                </li>
+                <h5>Scalable, Serverless Data Collection:</h5>
+                <li>Implement data collector applications using a serverless
+                    architecture to ensure automatic scaling and efficient resource utilization. Use <b><a href="https://cloud.google.com/run" target="_blank">Google Cloud Run</a></b> Service.
+                </li>
+                <h5>Leverage Cloud-Based Queuing:</h5>
+                <li>Use cloud-provided queuing services to manage and buffer data
+                    flow, ensuring reliable data delivery. Use <b><a href="https://cloud.google.com/pubsub" target="_blank">Google Pub/Sub</a></b>
+                </li>
+                <h5>Optimize EDW Integration with Regional Adapters:</h5>
+                <li>Position adapter services in the same region as
+                    the Enterprise Data Warehouse (EDW) to minimize latency during data transfer.
+                </li>
+                <h5>Ensure Data Integrity with Idempotent Database Operations:</h5>
+                <li>Design database operations to be idempotent, enabling safe retries and preventing data duplication
+                    in case of failures.
+                </li>
+                <h5>Guarantee Data Delivery with Acknowledgment Mechanisms:</h5>
+                <li>Implement acknowledgment mechanisms (e.g., Kafka acknowledgments) to prevent data loss during
+                    processing.
+                </li>
+                <p></p>
+            </div>
+            <p></p>
+            <button type="button" class="collapsible">Security</button>
+            <div class="content">
+                <p></p>
+                <h5>Encryption</h5>
+                <li>Requests are transmitted over http/3 network, both for internal and external communication.</li>
+                <li>Data is encrypted using Symmetric encryption, Use <a style="color:blue !important;"
+                                                                         href="https://en.wikipedia.org/wiki/ChaCha20-Poly1305"
+                                                                         target="_blank"><i>Cha-cha20-Poly1305</i></a>
+                    for better performance.
+                </li>
+                <p></p>
+                <p></p>
+                <h5>Authentication (Token-based authentication)</h5>
+                <h5><i>Considerations</i></h5>
+                <li>Use short-lived tokens and implement token rotation.</li>
+                <li>If required, implement geographic restrictions on token usage based on IP address or other location
+                    data.
+                </li>
+                <li>Implement rate limiting to prevent abuse and denial-of-service attacks.</li>
+                <li>Issue tokens from a central, secure server.</li>
+                <li>Distribute token validation logic to the data collection services, for reducing the latency.</li>
+                <p></p>
+            </div>
+            <p></p>
+            <button type="button" class="collapsible">Performance Considerations and Scaling</button>
+            <div class="content">
+                <p></p>
+                <li>Consider transmitting over https/3, this will add some data in the headers, this will not add that much
+                    load.
+                </li>
+                <li><b>GZIP</b> compression to reduce the bandwidth, for this small amount of data this will not yeild that
+                    much significate gain, still useful when we transfer more data over a period.
+                </li>
+                <li>The <b>Google Pub/Sub</b> provides Low latency, and it scales when needed using its infrastructure, and it is
+                    managed by the cloud provider.
+                </li>
+                <li><b>Google Pub/Sub</b> has inter-regional-connectivity to share the information, we can create <b>topic</b> once, and
+                    it is available in across the Google Cloud regions, and publishers (here the data collection
+                    services) can publish to the <b>topics</b>.
+                </li>
+                <li>Since we are using <b>Google CloudRun</b> as a <b>serverless platform</b>, as these are scalable by nature, we
+                    can create replication on demand, increasing the calculation power.
+                </li>
+                <li><b>Adapter</b> services will use the partitions in the Pubsub queue for effective consumption of the
+                    data.
+                </li>
+                <li>Bulk insertion to the database will be used to insert the batch data being transmitted (one minute/30
+                    seconds data).
+                </li>
+                <li>Using <b><i>plain/text</i></b> data to communicate between VLT terminals and Data collector services.</li>
+                <p></p>
+            </div>
+            <p></p>
+            <button type="button" class="collapsible">Cost</button>
+            <div class="content">
+                <p></p>
+                <li>We are implementing a serverless architecture to leverage its inherent auto-scaling capabilities. This allows us to dynamically adjust resource allocation based on the real-time processing demands of our global VLT network. With an anticipated 50% average utilization across VLT machines, serverless will enable us to scale resources proportionally, resulting in significant cost efficiencies. Further more since thse are serverless applications, our maintanance cost also reduced significantly.
+                </li>
+            </div>
+            <p></p>
+            <button type="button" class="collapsible">Handling Failures/Retry mechanisms</button>
+            <div class="content">
+                <p></p>
+                <h5>While transferring the data from VLT machine to Data collector service</h5>
+                <li>All the data needs to be validated for the integrity, once the message validation is successful, we will be published the changes into the Google Pub/Sub,
+                    and the acknowledgement is sent back to the VLT instance, if the acknowledgement is not successful we will be saving the data into a file for transferring the data during the recovery cycle.</li>
+                <li>The Same method will be used when the Data collector service failed to publish the data to the pubsub queue, we save the data in VLT machine.</li>
+                <h5>When Transfer the information from the Adapter Service to EDW</h5>
+                <li>A Separate post-controller endpoint will be used to transfer recovery data; in that case we can send the data in files, for a context if the Connectivity is failed for 4 hours, then the data will be stored in a file, preferably one file for one hour.</li>
+                <li>This end point in the collector service will parse the file and create data from this and send to the queue.</li>
+                <li>If we consider the 40 financial data per minute, we will be having a total of 40 x 60 = 2400 transactions per hour.</li>
+                <li>1320 bytes per minute, translate to 1320 bytes x 60 = 79.2Kb of data per hour.</li>
+            </div>
+            <p></p>
+            <button type="button" class="collapsible">Monitoring considerations</button>
+            <div class="content">
+                <p></p>
+                <li>Number of requests processed per second at each level</li>
+                <li>At Adapter level</li>
+                <li>At Data collection service level</li>
+                <li>Error Rates and recovery requirements.</li>
+                <li>Database operations and health checks.</li>
+                <li>Active Data collection services at a time, by region.</li>
+                <li>Queue length.</li>
+            </div>
+    </div>
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+    </script>
+</div>
+</body>
+</html>
